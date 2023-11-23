@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74.964" height="141.6" viewBox="0 0 74.964 141.6">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_616" data-name="Rectangle 616" width="74.964" height="141.6" fill="#daa000"/>
+    </clipPath>
+  </defs>
+  <g id="icon-d-yellow-op13" opacity="0.13">
+    <g id="Groupe_696" data-name="Groupe 696" transform="translate(0 0)">
+      <g id="Groupe_695" data-name="Groupe 695" clip-path="url(#clip-path)">
+        <g id="Groupe_30" transform="translate(0 0)">
+          <g id="Soustraction_22" transform="translate(0 0)">
+            <path id="Tracé_109" data-name="Tracé 109" d="M4.164,141.6H0V125.981H2.816a54.927,54.927,0,1,0,0-109.854H0V0H4.164A70.6,70.6,0,0,1,54.22,20.737,70.565,70.565,0,0,1,69.4,43.237a71.06,71.06,0,0,1,0,55.117,70.537,70.537,0,0,1-15.173,22.5A70.6,70.6,0,0,1,4.172,141.6Z" transform="translate(0 0)" fill="#daa000"/>
+          </g>
+          <g id="Soustraction_23" transform="translate(0 31.236)" opacity="0.62">
+            <path id="Tracé_110" data-name="Tracé 110" d="M5.207,79.131A34.067,34.067,0,0,1,0,78.725V.4A34.061,34.061,0,0,1,5.207,0,34.83,34.83,0,0,1,30.972,11.589,41.091,41.091,0,0,1,41.645,39.566,41.091,41.091,0,0,1,30.972,67.544,34.831,34.831,0,0,1,5.207,79.131Z" transform="translate(0 0)" fill="#daa000"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
