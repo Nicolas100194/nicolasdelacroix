@@ -1,0 +1,18 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+
+.btn-header-home
+  @include BtnFormSecond
+  border-color: $cSecond!important
+  width: auto!important
+  .elementor-widget-container
+    .elementor-button-wrapper
+      a
+        @include BtnLinkCoverXL
+        padding: 0 40px
+        font-size: 20px
+        color: $cSecond
+        &:hover
+          color: $cSecond
+        span
+          font-family: 'ChillaxSB'!important

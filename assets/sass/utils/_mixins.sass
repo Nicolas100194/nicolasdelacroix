@@ -1,0 +1,38 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+
+//POSITIONNEMENT
+
+@mixin FlexCenterH
+  display: flex
+  align-items: center
+
+//BACKGROUND
+@mixin BgContain
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: center
+
+
+//BUTTONS
+
+@mixin BtnFormPrinc
+  height: 66px
+  border: solid 1px
+  border-radius: $BorderRadiusBtn
+  width: auto
+
+@mixin BtnFormSecond
+  height: 80px
+  border: solid 1px
+  border-radius: $BorderRadiusBtnXL
+  width: auto
+
+@mixin BtnLinkCover
+  height: 100%
+  width: 100%
+  line-height: $HeightBtnPrinc
+
+@mixin BtnLinkCoverXL
+  height: 100%
+  width: 100%
+  line-height: $HeightBtnSecond

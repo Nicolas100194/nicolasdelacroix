@@ -1,0 +1,94 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+
+.section-first-home
+  height: calc(100vh - #{$HeightMenuTop})
+  .elementor-container
+    height: calc(100vh - #{$HeightMenuTop})
+    position: unset!important
+    max-width: 80vw!important
+    justify-content: center
+    .col-img
+      position: unset
+      padding-right: 95px
+      .elementor-widget-wrap
+        position: unset
+        .the-swiper
+          position: relative
+          z-index: 99
+          .swiper
+            position: unset
+            .swiper-pagination
+              position: absolute
+              bottom: -30px
+              .swiper-pagination-bullet
+                background-color: transparent
+                border: solid 2px $cSecond
+                opacity: 1
+              .swiper-pagination-bullet-active
+                background-color: $cSecond
+              .swiper-pagination-bullet, .swiper-pagination-bullet-active
+                width: 15px
+                height: 15px
+          &:before, &:after
+            content: ''
+            position: absolute
+            width: 30%
+            height: 50%
+            max-width: 215px
+            display: inline-block
+            @include BgContain
+          &:before
+            right: -5%
+            top: -25%
+            background-image: url("../icons/grid-yellow-for-bgw.svg")
+          &:after
+            left: -5%
+            bottom: -25%
+            background-image: url("../icons/grid-blue-for-bgwy.svg")
+        .form-yellow
+          width: 48%
+          position: absolute
+          left: 0
+          bottom: 0
+          img
+            width: 100%
+    .col-content-primary
+      max-width: 850px
+      .title-h1
+        margin-bottom: 0px
+        color: $cPrinc
+        position: relative
+        width: auto
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          //background-color: $cPrinc
+          width: 30px
+          height: 30px
+          top: calc(#{$lineHeight} - 10px)
+          right: -30px
+          background-image: url("../icons/mouse-logo.svg")
+          @include BgContain
+        h1, span
+          font-family: 'ChillaxSB'
+          line-height: $lineHeight
+          span
+            color: $cSecond
+      .title-h2
+        margin: 50px 0
+        color: $cSecond
+        max-width: 700px
+        h2
+          font-weight: 500
+        h2, span
+          font-size: 18px
+          line-height: 30px
+        span
+          color: $cPrinc
+          font-weight: 700
+
+
+
+

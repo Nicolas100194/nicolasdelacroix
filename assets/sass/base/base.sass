@@ -1,0 +1,36 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+
+*
+  font-family: 'Raleway'
+  padding: 0
+  margin: 0
+  text-decoration: none
+  list-style: none
+  box-sizing: border-box
+
+.text
+  font-size: 18px
+
+.p
+  font-size: 18px
+  line-height: 30px
+  letter-spacing: 0.8px
+  font-weight: 500
+
+.elementor-button
+  &:visited
+    color: $cSecond!important
+
+.elementor-element-populated
+  padding: 0px!important
+
+.section-primary
+  .elementor-container
+    max-width: 1600px!important
+    .col-left, .col-right
+      @include FlexCenterH
+    .col-left
+      padding-right: 60px
+    .col-right
+      padding-left: 60px
