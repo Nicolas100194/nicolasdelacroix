@@ -1,4 +1,45 @@
+//TITLES
+.title-h1, .title-h3, .title-h4, .title-h5
+  width: auto!important
+  margin-bottom: 0px!important
+  h1, h3, h4, h5, span
+    font-family: 'ChillaxSB'!important
+
+//TITLE H2
+
 .title-h1
   font-size: 35px
   h1
-    line-height: 60px
+    line-height: $lineHeightH1
+
+//TITLE H3
+
+.title-h3
+  font-size: 32px
+  h3
+    line-height: $lineHeightH3
+
+.title-h3-w
+  color: $cWhite
+
+
+//TITLE h4
+
+.title-h4
+  font-size: 24px
+  &:after
+    @include AfterTitleIcon
+    @include BgContain
+    bottom: -18px
+
+  h4
+    line-height: $lineHeightH4
+
+.title-h4-y
+  color: $cPrinc
+
+.title-h4-left
+  h4
+    font-family: 'ChillaxR'!important
+
+

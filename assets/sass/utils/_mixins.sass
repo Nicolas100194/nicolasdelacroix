@@ -6,11 +6,23 @@
   display: flex
   align-items: center
 
+@mixin FlexColumnCenterH
+  flex-direction: column
+  justify-content: center
+
 //BACKGROUND
+
 @mixin BgContain
   background-repeat: no-repeat
   background-size: contain
   background-position: center
+
+//Shadow
+@mixin BoxShadow
+  box-shadow: 0 0 20px $cShadow
+
+@mixin BoxShadowImg
+  box-shadow: 0 3px 15px $cShadowImg
 
 
 //BUTTONS
@@ -36,3 +48,13 @@
   height: 100%
   width: 100%
   line-height: $HeightBtnSecond
+
+@mixin AfterTitleIcon
+  content: ''
+  display: block
+  position: absolute
+  width: 30px
+  height: 30px
+  right: -30px
+  background-image: url("../icons/mouse-logo.svg")
+

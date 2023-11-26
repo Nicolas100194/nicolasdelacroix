@@ -41,15 +41,32 @@ header
           &:after
             position: absolute
             right: 20px
+            @include BgContain
         &:nth-of-type(3)
           border-color: $cSecond
           margin-left: 35px
+          &:hover
+            background-color: $cSecond
+            &:after
+              transform: translateY(5px)
+              transition: .3s
+              background-image: url("../icons/down-arrow-white.svg")
+          a
+            &:hover
+              color: $cWhite
           &:after
             background-image: url("../icons/down-arrow.svg")
         &:nth-of-type(4)
           background-color: $cPrinc
           border-color: $cPrinc
           margin-right: 0px
+          &:hover
+            opacity: .9
+            &:after
+              transform: rotate(-15deg)
+              width: 27px
+              transition: .3s
+
           &:after
             background-image: url("../icons/icon-contact-menu.svg")
             background-repeat: no-repeat
@@ -58,6 +75,8 @@ header
         a
           font-family: 'ChillaxSB'
           color: $cSecond
+
+
 
 
 

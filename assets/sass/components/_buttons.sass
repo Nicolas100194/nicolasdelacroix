@@ -1,6 +1,18 @@
 @import "../../../../nicolasdelacroix/assets/sass/utils/variables"
 @import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
 
+.btn-form-princ
+  @include BtnFormPrinc
+  .elementor-widget-container
+    .elementor-button-wrapper
+      a
+        @include BtnLinkCover
+        padding: 0px 25px
+        span
+          font-family: 'ChillaxSB'!important
+
+
+
 .btn-header-home
   @include BtnFormSecond
   border-color: $cSecond!important
@@ -16,3 +28,7 @@
           color: $cSecond
         span
           font-family: 'ChillaxSB'!important
+  &:hover
+    background-color: $cSecond
+    a
+      color: $cWhite!important

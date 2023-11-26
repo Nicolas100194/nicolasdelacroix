@@ -18,19 +18,41 @@
   letter-spacing: 0.8px
   font-weight: 500
 
+.section-primary
+  .elementor-container
+    max-width: 1600px!important
+    .col-left, .col-right, .col-content-primary
+      @include FlexCenterH
+      .txt-primary-content
+        max-width: 700px
+        color: $cSecond
+      .img-primary
+        img
+          border-radius: $BorderRadiusElts
+          @include BoxShadowImg
+    .col-left
+      padding-right: 60px
+    .col-right
+      padding-left: 60px
+
+.section-title-primary
+  padding: 50px 0
+  .col-title-primary
+    .title-primary, .title-secondary
+      margin: auto
+    .title-primary
+      max-width: 650px
+      text-align: center
+      color: $cSecond
+      padding-bottom: 30px
+    .title-secondary
+      color: $cPrinc
+
+
 .elementor-button
+  transition: unset!important
   &:visited
     color: $cSecond!important
 
 .elementor-element-populated
   padding: 0px!important
-
-.section-primary
-  .elementor-container
-    max-width: 1600px!important
-    .col-left, .col-right
-      @include FlexCenterH
-    .col-left
-      padding-right: 60px
-    .col-right
-      padding-left: 60px
