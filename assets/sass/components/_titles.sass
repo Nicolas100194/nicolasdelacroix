@@ -1,3 +1,5 @@
+
+
 //TITLES
 .title-h1, .title-h3, .title-h4, .title-h5
   width: auto!important
@@ -26,7 +28,7 @@
 //TITLE h4
 
 .title-h4
-  font-size: 24px
+  font-size: 28px
   &:after
     @include AfterTitleIcon
     @include BgContain
@@ -42,4 +44,20 @@
   h4
     font-family: 'ChillaxR'!important
 
+//TITLE H5
+.title-h5
+  font-size: 28px
+  color: $cSecond
+
+.title-w-check
+  padding-bottom: 20px
+  @include FlexCenterH
+  &:before
+    content: ''
+    display: block
+    background-image: url("../icons/check-yellow-blue.svg")
+    width: 30px
+    height: 30px
+    margin-right: 10px
+    @include BgContain
 

@@ -15,7 +15,7 @@
   font-size: 18px;
   line-height: 30px;
   letter-spacing: 0.8px;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .section-primary .elementor-container {
@@ -54,6 +54,34 @@
 }
 .section-title-primary .col-title-primary .title-secondary {
   color: #DAA000;
+}
+
+.section-single-y {
+  background-color: #DAA000;
+  padding: 50px 0;
+  color: #FFFF;
+  text-align: center;
+}
+.section-single-y:before {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 80%;
+  background-image: url("../icons/icon-md-d.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  left: 20px;
+  top: 8px;
+}
+.section-single-y .col-single-y .title-by {
+  width: auto;
+  margin: auto;
+  padding-bottom: 20px;
+}
+.section-single-y .col-single-y .txt-content-by {
+  line-height: 35px;
 }
 
 .elementor-button {
@@ -157,7 +185,7 @@
 }
 
 .title-h4 {
-  font-size: 24px;
+  font-size: 28px;
 }
 .title-h4:after {
   content: "";
@@ -182,6 +210,28 @@
 
 .title-h4-left h4 {
   font-family: "ChillaxR" !important;
+}
+
+.title-h5 {
+  font-size: 28px;
+  color: #2D435A;
+}
+
+.title-w-check {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.title-w-check:before {
+  content: "";
+  display: block;
+  background-image: url("../icons/check-yellow-blue.svg");
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 header {
@@ -430,7 +480,7 @@ header .menu-menu-principal-container .menu li a {
 }
 
 .section-bb {
-  padding: 50px 0;
+  padding: 50px 0 80px 0px;
   background-color: #2D435A;
 }
 .section-bb .col-sites-types .inner-section-sites .inner-col-sites {
@@ -498,27 +548,119 @@ header .menu-menu-principal-container .menu li a {
 }
 
 .section-site-vitrine {
-  padding: 65px 0;
+  padding: 65px 0 100px 0;
 }
 .section-site-vitrine .col-content-primary .btn-site-vitrine {
   width: auto;
-  border-color: #2D435A;
+  margin-top: 30px;
+  border-color: #DAA000;
+  background-color: #DAA000;
 }
 .section-site-vitrine .col-content-primary .btn-site-vitrine .elementor-widget-container .elementor-button-wrapper a {
-  color: #2D435A;
+  color: #FFFF;
 }
 .section-site-vitrine .col-content-primary .btn-site-vitrine .elementor-widget-container .elementor-button-wrapper a span {
   font-size: 18px;
   font-family: "ChillaxM" !important;
 }
 .section-site-vitrine .col-content-primary .btn-site-vitrine:hover {
-  background-color: #2D435A;
+  opacity: 0.9;
 }
 .section-site-vitrine .col-content-primary .btn-site-vitrine:hover .elementor-widget-container .elementor-button-wrapper a {
   color: #FFFF;
 }
 .section-site-vitrine .col-content-primary .btn-site-vitrine:hover .elementor-widget-container .elementor-button-wrapper:hover {
   transition: 0.3s;
+}
+
+.section-title-specs-w {
+  padding: 80px 0;
+}
+.section-title-specs-w .col-title-specs-w .title-specs-w {
+  color: #2D435A;
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+}
+.section-title-specs-w .col-title-specs-w .title-specs-w:after {
+  display: none;
+}
+
+.section-specs-w .elementor-container {
+  max-width: 1600px !important;
+}
+.section-specs-w .elementor-container .col-content-specs .txt-content-specs {
+  color: #2D435A;
+  margin-bottom: 0px;
+  padding-bottom: 50px;
+}
+.first-section-s-w {
+  padding-bottom: 80px;
+}
+
+.section-title-websites {
+  padding: 100px 0 0 0;
+}
+
+.section-websites-achievements {
+  background-color: #2D435A;
+  overflow: hidden;
+  height: 600px;
+  padding-top: 150px;
+}
+.section-websites-achievements .elementor-container {
+  max-width: 1600px !important;
+}
+.section-websites-achievements .elementor-container .col-btn-achievements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-websites-achievements .elementor-container .col-btn-achievements .elementor-widget-wrap {
+  width: auto;
+}
+.section-websites-achievements .elementor-container .col-btn-achievements .elementor-widget-wrap .btn-achievements {
+  border-color: #FFFF;
+  width: auto;
+}
+.section-websites-achievements .elementor-container .col-img-achievements {
+  width: 100%;
+  position: unset !important;
+}
+.section-websites-achievements .elementor-container .col-img-achievements .elementor-widget-wrap {
+  position: unset;
+}
+.section-websites-achievements .elementor-container .col-img-achievements .elementor-widget-wrap .img-achievements {
+  position: unset;
+}
+.section-websites-achievements .elementor-container .col-img-achievements .elementor-widget-wrap .img-achievements .elementor-widget-container {
+  position: unset;
+}
+.section-websites-achievements .elementor-container .col-img-achievements .elementor-widget-wrap .img-achievements .elementor-widget-container img {
+  position: absolute;
+  width: 95%;
+  height: auto;
+  left: 86%;
+  transform: translateX(-50%);
+  top: -150px;
+}
+
+.section-title-e-commerce, .section-title-r-s {
+  padding: 80px 0;
+}
+.section-title-e-commerce .col-title-e-commerce .title-e-commerce, .section-title-e-commerce .col-title-e-commerce .title-r-s, .section-title-e-commerce .col-title-r-s .title-e-commerce, .section-title-e-commerce .col-title-r-s .title-r-s, .section-title-r-s .col-title-e-commerce .title-e-commerce, .section-title-r-s .col-title-e-commerce .title-r-s, .section-title-r-s .col-title-r-s .title-e-commerce, .section-title-r-s .col-title-r-s .title-r-s {
+  margin: auto;
+  max-width: 700px;
+  text-align: center;
+  color: #DAA000;
+}
+.section-title-e-commerce .col-title-e-commerce .title-e-commerce:after, .section-title-e-commerce .col-title-e-commerce .title-r-s:after, .section-title-e-commerce .col-title-r-s .title-e-commerce:after, .section-title-e-commerce .col-title-r-s .title-r-s:after, .section-title-r-s .col-title-e-commerce .title-e-commerce:after, .section-title-r-s .col-title-e-commerce .title-r-s:after, .section-title-r-s .col-title-r-s .title-e-commerce:after, .section-title-r-s .col-title-r-s .title-r-s:after {
+  display: none;
+}
+
+.section-e-site .col-content-e-site .txt-content-e-site, .section-e-site .col-content-e-site .txt-content-r-s, .section-e-site .col-content-r-s .txt-content-e-site, .section-e-site .col-content-r-s .txt-content-r-s, .section-r-s .col-content-e-site .txt-content-e-site, .section-r-s .col-content-e-site .txt-content-r-s, .section-r-s .col-content-r-s .txt-content-e-site, .section-r-s .col-content-r-s .txt-content-r-s {
+  color: #2D435A;
+  padding-bottom: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -104,7 +104,7 @@
       margin-right: 20px
 
 .section-bb
-  padding: 50px 0
+  padding: 50px 0 80px 0px
   background-color: $cSecond
   .col-sites-types
     .inner-section-sites
@@ -157,20 +157,22 @@
   background-color: $cThirdVariant2
 
 .section-site-vitrine
-  padding: 65px 0
+  padding: 65px 0 100px 0
   .col-content-primary
     .btn-site-vitrine
       width: auto
-      border-color: $cSecond
+      margin-top: 30px
+      border-color: $cPrinc
+      background-color: $cPrinc
       .elementor-widget-container
         .elementor-button-wrapper
           a
-            color: $cSecond
+            color: $cWhite
             span
               font-size: 18px
               font-family: 'ChillaxM'!important
       &:hover
-        background-color: $cSecond
+        opacity: .9
         .elementor-widget-container
           .elementor-button-wrapper
             a
@@ -178,6 +180,154 @@
             &:hover
               transition: $durationTransition
 
+//.first-section-site-specs
+  padding-top: 80px
+//.section-md-primary
+  min-height: 600px
+  @include FlexCenterH
+  .elementor-container
+    height: 100%
+    .col-md-img
+      .img-site-bb
+        background-color: $cSecond
+      .img-site-by
+        background-color: $cPrinc
+      .img-site-specs
+        height: 100%
+        min-height: 500px
+        @include FlexCenterHV
+        .elementor-widget-container
+          width: 45%
+          img
+            width: 100%
+    .col-md-content
+      .elementor-widget-wrap
+        flex-direction: column
+        justify-content: center
+        .title-site-specs
+        .form-separator-y
+          width: 50px
+          .elementor-divider-separator
+            height: 2px
+            background-color: $cPrinc
+            border-top: unset!important
+        .txt-site-specs
+          color: $cSecond
+    .col-md-primary-left
+      padding-right: 15px
+    .col-md-primary-right
+      padding-left: 15px
+
+//.section-w-icon-left, .section-w-icon-right, .section-last-w-icon-left
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    @include BgContain
+    width: 500px
+    height: 500px
+
+//.section-w-icon-left
+  &:before
+    background-image: url("../img/bg-mockup-laptop-figure.png")
+    transform: translateX(-50%)
+
+//.section-w-icon-right
+  &:before
+    background-image: url("../img/bg-mockup-tab-figure.png")
+    transform: translateX(50%)
+    right: 0
+    height: 700px
+
+//.section-last-w-icon-left
+  padding-bottom: 150px
+  &:before
+    background-image: url("../img/bg-mockup-figure.png")
+    transform: translateX(-50%)
+    background-size: cover
+    height: 700px
+    width: 600px
+
+
+.section-title-specs-w
+  padding: 80px 0
+  .col-title-specs-w
+    .title-specs-w
+      color: $cSecond
+      max-width: 600px
+      text-align: center
+      margin: auto
+      &:after
+        display: none
 
 
 
+.section-specs-w
+  .elementor-container
+    max-width: 1600px!important
+    .col-content-specs
+      .txt-content-specs
+        color: $cSecond
+        margin-bottom: 0px
+        padding-bottom: 50px
+    .col-img-specs
+      .img-specs
+
+.first-section-s-w
+  padding-bottom: 80px
+
+
+
+.section-title-websites
+  padding: 100px 0 0 0
+
+.section-websites-achievements
+  background-color: $cSecond
+  overflow: hidden
+  height: 600px
+  padding-top: 150px
+  .elementor-container
+    max-width: 1600px!important
+    .col-btn-achievements
+      @include FlexCenterHV
+      .elementor-widget-wrap
+        width: auto
+        .btn-achievements
+          border-color: $cWhite
+          width: auto
+    .col-img-achievements
+      width: 100%
+      position: unset!important
+      .elementor-widget-wrap
+        position: unset
+        .img-achievements
+          position: unset
+          .elementor-widget-container
+            position: unset
+            img
+              position: absolute
+              width: 95%
+              height: auto
+              left: 86%
+              transform: translateX(-50%)
+              top: -150px
+
+.section-title-e-commerce, .section-title-r-s
+  padding: 80px 0
+  .col-title-e-commerce, .col-title-r-s
+    .title-e-commerce, .title-r-s
+      margin: auto
+      max-width: 700px
+      text-align: center
+      color: $cPrinc
+      &:after
+        display: none
+
+.section-e-site, .section-r-s
+  .col-img-e-site
+    .img-e-site
+  .col-content-e-site, .col-content-r-s
+    .title-w-check
+    .txt-content-e-site, .txt-content-r-s
+      color: $cSecond
+      padding-bottom: 50px

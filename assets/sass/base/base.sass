@@ -16,7 +16,7 @@
   font-size: 18px
   line-height: 30px
   letter-spacing: 0.8px
-  font-weight: 500
+  font-weight: 500!important
 
 .section-primary
   .elementor-container
@@ -47,6 +47,31 @@
       padding-bottom: 30px
     .title-secondary
       color: $cPrinc
+
+.section-single-y
+  background-color: $cPrinc
+  padding: 50px 0
+  color: $cWhite
+  text-align: center
+  &:before
+    content: ''
+    display: block
+    width: 180px
+    height: 80%
+    background-image: url("../icons/icon-md-d.svg")
+    @include BgContain
+    position: absolute
+    left: 20px
+    top: 8px
+  .col-single-y
+    .icon-by
+    .title-by
+      width: auto
+      margin: auto
+      padding-bottom: 20px
+    .txt-content-by
+      line-height: 35px
+
 
 
 .elementor-button
