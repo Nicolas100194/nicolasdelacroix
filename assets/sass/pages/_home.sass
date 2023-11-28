@@ -143,7 +143,7 @@
         .btn-sites
           @include BtnFormPrinc
           background-color: $cPrinc
-          border-color: $cPrinc
+          border-color: $cPrinc!important
           margin: 0 auto 20px auto
           a
             color: $cSecond
@@ -162,7 +162,7 @@
     .btn-site-vitrine
       width: auto
       margin-top: 30px
-      border-color: $cPrinc
+      border-color: $cPrinc!important
       background-color: $cPrinc
       .elementor-widget-container
         .elementor-button-wrapper
@@ -179,75 +179,6 @@
               color: $cWhite
             &:hover
               transition: $durationTransition
-
-//.first-section-site-specs
-  padding-top: 80px
-//.section-md-primary
-  min-height: 600px
-  @include FlexCenterH
-  .elementor-container
-    height: 100%
-    .col-md-img
-      .img-site-bb
-        background-color: $cSecond
-      .img-site-by
-        background-color: $cPrinc
-      .img-site-specs
-        height: 100%
-        min-height: 500px
-        @include FlexCenterHV
-        .elementor-widget-container
-          width: 45%
-          img
-            width: 100%
-    .col-md-content
-      .elementor-widget-wrap
-        flex-direction: column
-        justify-content: center
-        .title-site-specs
-        .form-separator-y
-          width: 50px
-          .elementor-divider-separator
-            height: 2px
-            background-color: $cPrinc
-            border-top: unset!important
-        .txt-site-specs
-          color: $cSecond
-    .col-md-primary-left
-      padding-right: 15px
-    .col-md-primary-right
-      padding-left: 15px
-
-//.section-w-icon-left, .section-w-icon-right, .section-last-w-icon-left
-  overflow: hidden
-  &:before
-    content: ''
-    position: absolute
-    @include BgContain
-    width: 500px
-    height: 500px
-
-//.section-w-icon-left
-  &:before
-    background-image: url("../img/bg-mockup-laptop-figure.png")
-    transform: translateX(-50%)
-
-//.section-w-icon-right
-  &:before
-    background-image: url("../img/bg-mockup-tab-figure.png")
-    transform: translateX(50%)
-    right: 0
-    height: 700px
-
-//.section-last-w-icon-left
-  padding-bottom: 150px
-  &:before
-    background-image: url("../img/bg-mockup-figure.png")
-    transform: translateX(-50%)
-    background-size: cover
-    height: 700px
-    width: 600px
-
 
 .section-title-specs-w
   padding: 80px 0
@@ -293,7 +224,7 @@
       .elementor-widget-wrap
         width: auto
         .btn-achievements
-          border-color: $cWhite
+          border-color: $cWhite!important
           width: auto
     .col-img-achievements
       width: 100%
@@ -331,3 +262,6 @@
     .txt-content-e-site, .txt-content-r-s
       color: $cSecond
       padding-bottom: 50px
+
+.section-r-s
+  padding-bottom: 80px
