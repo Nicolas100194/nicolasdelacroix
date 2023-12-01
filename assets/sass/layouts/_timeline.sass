@@ -1,0 +1,53 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+
+.section-title-timeline
+  padding: 100px 0px 70px 0!important
+
+
+.section-timeline-step
+  min-height: $heightStep
+  .elementor-container
+    min-height: $heightStep
+    max-width: 1600px!important
+    .col-img-step, .col-content-step, .col-number-step
+      .elementor-widget-wrap
+        align-content: center
+    .col-img-step, .col-content-step
+      width: 37.5%!important
+    .col-img-step
+      .img-step
+        height: 100%
+        .elementor-widget-container
+          height: 100%
+          @include FlexCenterH
+          img
+            object-fit: cover
+            width: auto
+            height: 80%
+            border-radius: $BorderRadiusElts
+            @include BoxShadowImg
+    .col-number-step
+      width: 25%!important
+      .img-number-step
+        position: unset
+        .elementor-widget-container
+          img
+            width: 85px
+          &:after
+            position: absolute
+            left: 50%
+            content: ''
+            height: calc( 100% - 85px )
+            width: 1px
+            background-color: $cPrinc
+            display: block
+    .col-content-step
+      .span-content-step, .txt-content-step
+        span, p
+          color: $cSecond
+      .span-content-step
+        font-size: 24px
+        span
+          font-family: 'ChillaxSB'
+      .txt-content-step

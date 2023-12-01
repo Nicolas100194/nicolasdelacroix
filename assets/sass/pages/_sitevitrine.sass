@@ -1,0 +1,130 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+
+.section-head-website
+  background-color: $cPrinc
+  padding: 70px 0
+  .col-title-head
+    @include FlexCenterH
+    .title-head-ws
+      h1
+        color: $cSecond
+
+        span
+          color: $cWhite
+  .col-img-head
+    .img-head-ws
+
+.section-subhead-website
+  color: $cSecond
+  padding: 80px 0
+  .elementor-container
+    justify-content: center
+    .col-content-subhead
+      max-width: 900px
+      .elementor-widget-wrap
+        flex-direction: column
+        align-items: center
+        .title-subhead, .txt-subhead
+          text-align: center
+        .title-subhead
+          padding-bottom: 50px
+          h2
+        .txt-subhead
+          max-width: 80%
+          padding-bottom: 30px
+          p
+            line-height: 40px
+          strong
+            color: $cPrinc
+        .btn-center
+          background-color: $cPrinc
+          margin: auto
+          width: auto
+          border-color: $cPrinc!important
+          a
+            color: $cWhite
+
+.section-title-w-h2
+  padding: 80px 0
+  .col-title-w-h2
+    .elementor-widget-wrap
+      justify-content: center
+      .title-h2-w
+        color: $cSecond
+
+.section-what-website-v
+  padding: 50px 0
+
+.section-website-v-y
+  &:before
+    top: 30px
+
+.section-title-stats
+  padding: 80px 0!important
+
+.section-cards-stats
+  padding-bottom: 50px
+  .elementor-container
+    max-width: 1400px!important
+    .col-card-stats
+      .txt-stat
+        background-color: $cPrinc
+        color: $cWhite
+        font-size: 80px
+        height: 300px
+        display: flex
+        flex-direction: column
+        font-weight: 500
+        justify-content: end
+        margin-bottom: 0px
+        &:before, &:after
+          content: ''
+          display: block
+          position: absolute
+          top: 20px
+          @include BgContain
+        &:before
+          width: 35px
+          height: 35px
+          background-image: url("../icons/icon-stats.svg")
+          left: 20px
+        &:after
+          right: 20px
+          height: 117px
+          width: 164px
+          background-position: right
+          background-image: url("../icons/icon-d-cards.svg")
+        .elementor-widget-container
+          padding: 0 0 20px 20px
+      .inner-section-card
+        min-height: 300px
+        background-color: $cWhite
+        padding: 0 20px
+        .elementor-container
+          height: 100%
+          .inner-col-card
+            .elementor-widget-wrap
+              align-content: center
+              .title-card, .separator-card, .txt-card
+                color: $cSecond
+              .title-card
+                font-size: 22px
+                color: $cSecond
+                min-height: 45%
+                text-transform: uppercase
+                .elementor-widget-container
+                  h3
+                    line-height: 35px
+              .separator-card
+                margin-bottom: 0px
+                width: 50px
+                .elementor-divider-separator
+                  height: 2px
+                  background-color: $cPrinc
+                  border-top: unset!important
+              .txt-card
+                font-weight: 500
+      &:nth-of-type(2)
+        margin: 0 50px
+
