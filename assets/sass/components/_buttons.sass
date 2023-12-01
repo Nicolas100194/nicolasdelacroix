@@ -1,0 +1,80 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+
+.btn-form-princ
+  @include BtnFormPrinc
+  .elementor-widget-container
+    .elementor-button-wrapper
+      a
+        @include BtnLinkCover
+        padding: 0px 25px
+        font-size: 18px
+        span
+          font-family: 'ChillaxSB'!important
+
+
+
+.btn-header-home
+  @include BtnFormSecond
+  border-color: $cSecond!important
+  width: auto!important
+  .elementor-widget-container
+    .elementor-button-wrapper
+      a
+        @include BtnLinkCoverXL
+        padding: 0 40px
+        font-size: 20px
+        color: $cSecond
+        &:hover
+          color: $cSecond
+        span
+          font-family: 'ChillaxSB'!important
+  &:hover
+    background-color: $cSecond
+    a
+      color: $cWhite!important
+
+.section-btn-center
+  padding: 50px 0
+  .col-btn-center
+    .btn-center
+      border-color: $cPrinc!important
+      background-color: $cPrinc
+      width: auto!important
+      margin: auto
+      a
+        color: $cWhite
+    &:hover
+      opacity: .9
+
+.section-btn-large
+  padding: 80px 0
+  .elementor-container
+    max-width: 950px!important
+    .col-btn-large
+      .elementor-widget-wrap
+        justify-content: center
+        .btn-large
+          width: 300px
+          a
+            padding: 30px
+            font-size: 30px
+            span
+              font-family: 'ChillaxSB'
+              .elementor-button-text
+                display: flex
+                flex-direction: column
+                align-items: center
+                &:after
+                  content: ''
+                  display: block
+                  margin-top: 20px
+                  background-image: url("../icons/right-arrow.svg")
+                  @include BgContain
+                  width: 40px
+                  height: 40px
+        .btn-large-y
+          background-color: $cPrinc
+        .btn-large-b
+          background-color: $cSecond
+

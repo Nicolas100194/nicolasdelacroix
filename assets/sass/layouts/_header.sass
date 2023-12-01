@@ -1,0 +1,85 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+
+header
+  display: flex
+  justify-content: space-between
+  height: $HeightMenuTop
+  padding: 0 30px
+  font-weight: 500
+  color: $cSecond
+  .logo-header-desktop
+    height: auto
+    @include FlexCenterH
+    .logo-default
+      height: 95px
+  .menu-menu-principal-container
+    @include FlexCenterH
+    .menu
+      @include FlexCenterH
+      li
+        position: relative
+        height: 100%
+        margin: 0 15px
+        &:nth-of-type(3), &:nth-of-type(4)
+          @include FlexCenterH
+          @include BtnFormPrinc
+          &:after
+            content: ''
+            display: inline-block
+            height: 30px
+            width: 30px
+        &:nth-of-type(1)
+          margin-right: 25px
+        &:nth-of-type(3), &:nth-of-type(4)
+          a
+            @include BtnLinkCover
+            z-index: 99
+            position: relative
+            padding-right: 65px
+            padding-left: 20px
+          &:after
+            position: absolute
+            right: 20px
+            @include BgContain
+        &:nth-of-type(3)
+          border-color: $cSecond
+          margin-left: 35px
+          &:hover
+            background-color: $cSecond
+            &:after
+              transform: translateY(5px)
+              transition: .3s
+              background-image: url("../icons/down-arrow-white.svg")
+          a
+            &:hover
+              color: $cWhite
+          &:after
+            background-image: url("../icons/down-arrow.svg")
+        &:nth-of-type(4)
+          background-color: $cPrinc
+          border-color: $cPrinc!important
+          margin-right: 0px
+          &:hover
+            opacity: .9
+            &:after
+              transform: rotate(-15deg)
+              width: 27px
+              transition: .3s
+
+          &:after
+            background-image: url("../icons/icon-contact-menu.svg")
+            background-repeat: no-repeat
+          a
+            color: $cWhite
+        a
+          font-family: 'ChillaxSB'
+          color: $cSecond
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+
+.section-contact
+  .elementor-container
+    max-width: 100%!important
+    .col-img-contact
+
+      .img-contact
+        img
+          height: 900px
+          width: 100%
+          object-fit: cover
+    .col-form-contact
+      padding: 50px
+      .title-form
+        font-size: 42px
+        padding-bottom: 20px
+      .txt-form
+        color: $cSecond
+      .form
+        max-width: 1000px!important
+        .wpcf7-form
+          display: flex
+          flex-wrap: wrap
+          color: $cSecond
+          font-weight: 600
+          textarea
+            margin-top: 10px
+            padding-top: 10px
+          input, textarea
+            border: solid 2px $cPrinc
+            padding-left: 10px
+          input
+            margin: 10px 0px 30px 0px
+            height: 45px
+          fieldset
+            border-style: none
+            width: 50%
+            p, span, input
+              width: 100%
+            &:first-of-type
+              padding-right: 25px
+            &:nth-of-type(2)
+              padding-left: 25px
+          p
+            .wpcf7-submit
+              margin-top: 50px
+              border-color: $cPrinc
+              color: $cWhite
+              background-color: $cPrinc
+              padding: 0 25px
+              font-family: 'ChillaxSB'
+              font-size: 18px
+          p:first-of-type
+            width: 100%
+            textarea
+              width: 100%
+
+
+

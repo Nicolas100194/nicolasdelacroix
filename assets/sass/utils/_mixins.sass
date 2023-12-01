@@ -1,0 +1,65 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+
+//POSITIONNEMENT
+
+@mixin FlexCenterH
+  display: flex
+  align-items: center
+
+@mixin FlexColumnCenterH
+  flex-direction: column
+  justify-content: center
+
+@mixin FlexCenterHV
+  display: flex
+  align-items: center
+  justify-content: center
+
+//BACKGROUND
+
+@mixin BgContain
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: center
+
+//Shadow
+@mixin BoxShadow
+  box-shadow: 0 0 20px $cShadow
+
+@mixin BoxShadowImg
+  box-shadow: 0 3px 15px $cShadowImg
+
+
+//BUTTONS
+
+@mixin BtnFormPrinc
+  height: 66px!important
+  border: solid 1px!important
+  border-radius: $BorderRadiusBtn
+  width: auto
+
+@mixin BtnFormSecond
+  height: 80px
+  border: solid 1px
+  border-radius: $BorderRadiusBtnXL
+  width: auto
+
+@mixin BtnLinkCover
+  height: 100%
+  width: 100%
+  line-height: $HeightBtnPrinc
+
+@mixin BtnLinkCoverXL
+  height: 100%
+  width: 100%
+  line-height: $HeightBtnSecond
+
+@mixin AfterTitleIcon
+  content: ''
+  display: block
+  position: absolute
+  width: 30px
+  height: 30px
+  right: -30px
+  background-image: url("../icons/mouse-logo.svg")
+

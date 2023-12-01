@@ -1,0 +1,267 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+
+.section-first-home
+  height: calc(100vh - #{$HeightMenuTop})
+  min-height: calc(950px - #{$HeightMenuTop})
+  max-height: 1100px!important
+  overflow: hidden
+  .elementor-container
+    height: calc(100vh - #{$HeightMenuTop})
+    min-height: calc(950px - #{$HeightMenuTop})
+    max-height: 1100px!important
+    position: unset!important
+    max-width: 2500px!important
+    justify-content: center
+    .col-img
+      position: unset
+      padding-right: 95px
+      .elementor-widget-wrap
+        position: unset
+        .the-swiper
+          position: relative
+          z-index: 99
+          width: 100%
+          .swiper
+            position: unset
+            .swiper-pagination
+              position: absolute
+              bottom: -30px
+              .swiper-pagination-bullet
+                background-color: transparent
+                border: solid 2px $cSecond
+                opacity: 1
+              .swiper-pagination-bullet-active
+                background-color: $cSecond
+              .swiper-pagination-bullet, .swiper-pagination-bullet-active
+                width: 15px
+                height: 15px
+          &:before, &:after
+            content: ''
+            position: absolute
+            width: 30%
+            height: 50%
+            max-width: 215px
+            display: inline-block
+            @include BgContain
+          &:before
+            right: -5%
+            top: -25%
+            background-image: url("../icons/grid-yellow-for-bgw.svg")
+          &:after
+            left: -5%
+            bottom: -25%
+            background-image: url("../icons/grid-blue-for-bgwy.svg")
+        .form-yellow
+          width: 48%
+          position: absolute
+          left: 0
+          bottom: -10%
+          img
+            width: 100%
+    .col-content-primary
+      max-width: 850px
+      .title-h1
+        margin-bottom: 0px
+        color: $cPrinc
+        position: relative
+        width: auto
+        &:after
+          top: calc(#{$lineHeightH1} - 10px)
+          @include AfterTitleIcon
+          @include BgContain
+        h1, span
+          line-height: $lineHeightH1
+          span
+            color: $cSecond
+      .chapo
+        margin: 50px 0
+        color: $cSecond
+        max-width: 700px
+        h2
+          font-weight: 500
+        h2, span
+          font-size: 18px
+          line-height: 30px
+        span
+          color: $cPrinc
+          font-weight: 700
+
+
+.section-title-left-bb
+  padding: 50px 0
+  background-color: $cSecond
+  .col-title-left-bb
+    .elementor-widget-wrap
+      @include FlexColumnCenterH
+    &:before
+      content: ''
+      background-image: url("../icons/icon-d-yellow-op13.svg")
+      @include BgContain
+      width: 75px
+      height: calc(#{$lineHeightH3} + #{$lineHeightH4} * 2)
+      display: block
+      margin-right: 20px
+
+.section-bb
+  padding: 50px 0 80px 0px
+  background-color: $cSecond
+  .col-sites-types
+    .inner-section-sites
+      .inner-col-sites
+        @include BoxShadow
+        background-color: $cThirdVariant
+        border-radius: $BorderRadiusElts
+        .icon-site
+          margin-top: 20px
+        .title-site
+          width: 100%!important
+          font-size: 24px
+          color: $cWhite
+          text-align: center
+          h5
+            max-width: 80%
+            margin: auto
+        .separator-sites
+          margin: 20px 0 0 0
+          .elementor-divider-separator
+            height: 1px
+            background-color: $cSeparator
+            border-top: unset
+        .list-sites
+          color: $cBlueVariant
+          font-size: 16px
+          padding: 0px 30px
+          ul
+            li
+              font-family: 'ChillaxSB'
+              line-height: 70px
+              svg
+                width: 33px
+                height: 33px
+                margin-right: 10px
+        .btn-sites
+          @include BtnFormPrinc
+          background-color: $cPrinc
+          border-color: $cPrinc!important
+          margin: 0 auto 20px auto
+          a
+            color: $cSecond
+          &:hover
+            transition: $durationTransition
+            opacity: .9
+        &:nth-of-type(1)
+          margin-right: 45px
+
+.section-b-v3
+  background-color: $cThirdVariant2
+
+.section-site-vitrine
+  padding: 65px 0 100px 0
+  .col-content-primary
+    .btn-site-vitrine
+      width: auto
+      margin-top: 30px
+      border-color: $cPrinc!important
+      background-color: $cPrinc
+      .elementor-widget-container
+        .elementor-button-wrapper
+          a
+            color: $cWhite
+            span
+              font-size: 18px
+              font-family: 'ChillaxM'!important
+      &:hover
+        opacity: .9
+        .elementor-widget-container
+          .elementor-button-wrapper
+            a
+              color: $cWhite
+            &:hover
+              transition: $durationTransition
+
+.section-title-specs-w
+  padding: 80px 0
+  .col-title-specs-w
+    .title-specs-w
+      color: $cSecond
+      max-width: 600px
+      text-align: center
+      margin: auto
+      &:after
+        display: none
+
+
+
+.section-specs-w
+  .elementor-container
+    max-width: 1600px!important
+    .col-content-specs
+      .txt-content-specs
+        color: $cSecond
+        margin-bottom: 0px
+        padding-bottom: 50px
+    .col-img-specs
+      .img-specs
+
+.first-section-s-w
+  padding-bottom: 80px
+
+
+
+.section-title-websites
+  padding: 100px 0 0 0
+
+.section-websites-achievements
+  background-color: $cSecond
+  overflow: hidden
+  height: 600px
+  padding-top: 150px
+  .elementor-container
+    max-width: 1600px!important
+    .col-btn-achievements
+      @include FlexCenterHV
+      .elementor-widget-wrap
+        width: auto
+        .btn-achievements
+          border-color: $cWhite!important
+          width: auto
+    .col-img-achievements
+      width: 100%
+      position: unset!important
+      .elementor-widget-wrap
+        position: unset
+        .img-achievements
+          position: unset
+          .elementor-widget-container
+            position: unset
+            img
+              position: absolute
+              width: 95%
+              height: auto
+              left: 86%
+              transform: translateX(-50%)
+              top: -150px
+
+.section-title-e-commerce, .section-title-r-s
+  padding: 80px 0
+  .col-title-e-commerce, .col-title-r-s
+    .title-e-commerce, .title-r-s
+      margin: auto
+      max-width: 700px
+      text-align: center
+      color: $cPrinc
+      &:after
+        display: none
+
+.section-e-site, .section-r-s
+  .col-img-e-site
+    .img-e-site
+  .col-content-e-site, .col-content-r-s
+    .title-w-check
+    .txt-content-e-site, .txt-content-r-s
+      color: $cSecond
+      padding-bottom: 50px
+
+.section-r-s
+  padding-bottom: 80px

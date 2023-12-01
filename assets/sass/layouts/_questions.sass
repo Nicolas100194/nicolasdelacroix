@@ -1,0 +1,48 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+
+.section-qa
+  padding: 80px 0
+  .col-img-qa
+    .img-qa
+  .col-content-qa
+    .title-content-qa
+      padding-bottom: 30px
+      h2
+        font-family: 'ChillaxSB'
+        color: $cPrinc
+        font-size: 30px
+    .inner-section-qa
+      background-color: $cWhite
+      @include BoxShadow
+      color: $cSecond
+      .inner-col-qa-content, .inner-col-icon-reply
+        padding: 20px
+      .inner-col-qa-content
+        width: 90%!important
+        .title-question
+          font-weight: 600
+          text-transform: uppercase
+          letter-spacing: 1px
+          font-size: 13px
+          margin-bottom: 0px
+          h3
+            line-height: 20px
+        .txt-reply
+          font-size: 16px
+          line-height: 25px
+          padding-top: 20px
+          transition: .3s
+        .txt-reply-hidden
+          padding-top: 0px!important
+          overflow: hidden
+          height: 0px
+          transition: .3s
+      .inner-col-icon-reply
+        width: 10%!important
+        .elementor-widget-wrap
+          align-content: center
+          .icon-display-reply
+            cursor: pointer
+      &:nth-of-type(2)
+        margin: 20px 0

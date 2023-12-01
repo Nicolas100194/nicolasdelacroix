@@ -8,6 +8,9 @@
     <?php wp_head()?>
 </head>
 <body>
-    <header>
+    <header class="text">
+        <a href="#" class="logo-header-desktop">
+            <img class="logo-default" src="wp-content/themes/nicolasdelacroix/assets/img/logo.png">
+        </a>
         <?php wp_nav_menu(['theme_location' => 'header']);?>
     </header>

@@ -1,0 +1,85 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+
+*
+  font-family: 'Raleway'
+  padding: 0
+  margin: 0
+  text-decoration: none
+  list-style: none
+  box-sizing: border-box
+
+.text
+  font-size: 18px
+
+.p
+  font-size: 18px
+  line-height: 30px
+  letter-spacing: 0.8px
+  font-weight: 500!important
+  color: $cSecond!important
+
+.section-primary
+  .elementor-container
+    max-width: 1600px!important
+    .col-left, .col-right, .col-content-primary
+      @include FlexCenterH
+      .txt-primary-content
+        max-width: 700px
+        color: $cSecond
+      .img-primary
+        img
+          border-radius: $BorderRadiusElts
+          @include BoxShadowImg
+    .col-left
+      padding-right: 60px
+    .col-right
+      padding-left: 60px
+
+.section-title-primary
+  padding: 50px 0
+  .col-title-primary
+    .title-primary, .title-secondary
+      margin: auto
+    .title-primary
+      max-width: 650px
+      text-align: center
+      color: $cSecond
+      padding-bottom: 30px
+    .title-secondary
+      color: $cPrinc
+
+.section-single-y
+  background-color: $cPrinc
+  padding: 50px 0
+  color: $cWhite
+  text-align: center
+  &:before
+    content: ''
+    display: block
+    width: 180px
+    height: 80%
+    background-image: url("../icons/icon-md-d.svg")
+    @include BgContain
+    position: absolute
+    left: 20px
+    top: 8px
+  .col-single-y
+    .icon-by
+    .title-by
+      width: auto
+      margin: auto
+      padding-bottom: 20px
+    .txt-content-by
+      line-height: 35px
+      color: $cWhite!important
+
+
+
+.elementor-button
+  transition: unset!important
+  &:visited
+    text-decoration: none
+
+.elementor-element-populated
+  padding: 0px!important
