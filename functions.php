@@ -6,6 +6,7 @@ function theme_NicolasDelacroix_register_assets(){
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js');
     wp_enqueue_script('swiper', get_stylesheet_directory_uri().'/assets/js/swiper-home.js', array(), null, true);
     wp_enqueue_script('swiperjs-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js');
+    wp_enqueue_script('questions-reply.js', get_stylesheet_directory_uri().'/assets/js/questions-reply.js', array(), null, true);
 
 
 }

@@ -4,7 +4,6 @@
 .section-title-timeline
   padding: 100px 0px 70px 0!important
 
-
 .section-timeline-step
   min-height: $heightStep
   .elementor-container
@@ -42,6 +41,11 @@
             width: 1px
             background-color: $cPrinc
             display: block
+      .last-img-number-step
+        .elementor-widget-container
+          img
+          &:after
+            display: none
     .col-content-step
       .span-content-step, .txt-content-step
         span, p
@@ -51,3 +55,6 @@
         span
           font-family: 'ChillaxSB'
       .txt-content-step
+
+.last-section-timeline
+  padding-bottom: 50px
