@@ -1,0 +1,76 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+@import "../../../../nicolasdelacroix/assets/sass/utils/variables"
+
+
+.section-head-wp
+  background-color: $cSecond
+  padding: 50px 0
+  .col-head-wp
+    .elementor-widget-wrap
+      justify-content: center
+      .title-h1-wp
+        color: $cWhite
+
+.section-title-content-wp
+  padding: 70px 0 120px 0
+  .col-title-content-wp
+    .elementor-widget-wrap
+      .title-content-wp
+        color: $cSecond
+        text-align: center
+        margin: auto
+
+.section-p-wp
+  padding-bottom: 20px
+  .col-content-p-wp
+    .title-bg-y
+      width: auto
+      background-color: $cPrinc
+      color: $cWhite
+      h3
+        margin-right: 20px
+        font-family: 'ChillaxSB'
+        text-transform: uppercase
+        padding: 10px 0
+        @include FlexCenterH
+        &:before
+          content: ''
+          width: 50px
+          height: 50px
+          display: inline-block
+          background-image: url("../icons/taches.svg")
+          @include BgContain
+          margin: 0 20px 0 20px
+    .txt-content-p-wp
+      margin-bottom: 50px
+    .inner-section-icons
+      .inner-col-icons
+        .icon-content-wp
+          height: 90px
+        .txt-icon-wp
+          text-align: center
+          text-transform: uppercase
+  .col-img-p-wp
+    .img-wp
+
+.section-pwp-second
+  margin: 150px 0 50px 0
+  .col-content-p-wp
+    .title-bg-y
+      h3::before
+        background-image: url("../icons/facile.svg")
+
+
+.section-single-site
+  .span-title-list
+    color: $cPrinc
+    span
+      font-size: 24px
+      font-weight: 500
+  .list-check-y
+    line-height: 30px!important
+    li
+      margin-bottom: 20px
+
+.section-no-ab
+  padding: 50px 0

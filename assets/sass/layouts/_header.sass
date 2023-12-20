@@ -3,11 +3,16 @@
 
 header
   display: flex
+  position: fixed
   justify-content: space-between
+  width: 100%
   height: $HeightMenuTop
   padding: 0 30px
   font-weight: 500
   color: $cSecond
+  background-color: $cWhite
+  z-index: 999
+  @include BoxShadow
   .logo-header-desktop
     height: auto
     @include FlexCenterH
@@ -47,13 +52,12 @@ header
           margin-left: 35px
           &:hover
             background-color: $cSecond
+            a
+              color: $cWhite
             &:after
               transform: translateY(5px)
               transition: .3s
               background-image: url("../icons/down-arrow-white.svg")
-          a
-            &:hover
-              color: $cWhite
           &:after
             background-image: url("../icons/down-arrow.svg")
         &:nth-of-type(4)
@@ -75,6 +79,55 @@ header
         a
           font-family: 'ChillaxSB'
           color: $cSecond
+      .menu-item-has-children
+        a
+          &:hover
+            color: $cWhite
+        .sub-menu
+          display: none
+          z-index: 99
+          position: absolute
+          width: auto
+          padding-top: 220px
+          border-radius: $BorderRadiusBtn
+          li:first-of-type
+            border-radius: $BorderRadiusBtn $BorderRadiusBtn 0 0
+            border-bottom: solid 1px $cWhite
+            &:before
+              background-image: url("../icons/icon-sub-site-vitrine.svg")
+          li:last-of-type
+            border-radius: 0 0 $BorderRadiusBtn $BorderRadiusBtn
+            &:before
+              background-image: url("../icons/icon-sub-site-ecommerce.svg")
+          li
+            margin: 0px
+            text-align: right
+            background-color: $cPrinc
+            &:before
+              position: absolute
+              content: ''
+              display: inline-block
+              @include BgContain
+              height: 30px
+              width: 30px
+              left: 17.5px
+              top: 50%
+              transform: translateY(-50%)
+            &:hover
+              background-color: $cSecond
+          li
+            a
+              color: $cWhite
+              padding-left: 65px
+              padding-right: 20px
+              width: 100%
+              display: block
+
+        .sub-menu-display
+          display: block
+
+
+
 
 
 
