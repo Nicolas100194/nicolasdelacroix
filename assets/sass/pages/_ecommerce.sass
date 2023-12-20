@@ -8,12 +8,83 @@
     li
       .elementor-icon-list-icon
         svg
-          width: 41px!important
-          height: 41px!important
+          width: 25px!important
+          height: 27px!important
           image
             width: 100%
             object-fit: contain
             height: 100%
       .elementor-icon-list-text
         font-size: 18px
-        font-weight: 500!important
+        font-weight: 600!important
+
+.section-swiper-eshop
+  background-color: $cSecond
+  padding: 80px 0
+  .elementor-container
+    max-width: 1600px!important
+    .col-content-eshop
+      padding-right: 50px
+      .elementor-widget-wrap
+        align-content: center
+        .title-eshop
+          color: $cPrinc
+          h2
+            font-family: 'ChillaxSB'
+            font-size: 40px
+        .txt-eshop
+          color: $cBlueVariant!important
+    .col-swiper-eshop
+      position: unset
+      .elementor-widget-wrap
+        position: unset
+        .swiper-eshop
+          position: unset
+          .swiper-ecommerce
+            position: unset
+            .swiper-slide
+              border-radius: $BorderRadiusElts
+              background-color: $cThirdVariant3
+              @include BoxShadow
+              padding: 30px
+              .icon-slide
+                height: 50px
+                width: 50px
+                background-image: url("../icons/analys.svg")
+                @include BgContain
+              .container-title-slide
+                padding: 30px 0
+                .title-slide
+                  color: $cWhite
+                  text-transform: uppercase
+                  font-family: 'ChillaxSB'
+                  font-size: 24px
+              .container-txt-slide
+                .txt-slide
+                  color: $cBlueVariant!important
+          .swiper-button-prev, .swiper-button-next
+            &:after
+              content: ''
+              width: 50px
+              height: 50px
+              @include BgContain
+          .swiper-button-prev
+            left: 30%
+            &:after
+              background-image: url("../icons/prev-swiper-eshop.svg")
+          .swiper-button-next
+            right: -3%
+            &:after
+              background-image: url("../icons/next-swiper-eshop.svg")
+          .swiper-pagination
+            position: absolute
+            width: auto
+            .swiper-pagination-bullet
+              background-color: transparent
+              border: solid 2px $cWhite
+              opacity: 1
+            .swiper-pagination-bullet-active
+              background-color: $cWhite
+            .swiper-pagination-bullet, .swiper-pagination-bullet-active
+              width: 15px
+              height: 15px
