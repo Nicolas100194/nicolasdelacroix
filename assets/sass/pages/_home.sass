@@ -86,22 +86,18 @@
         span
           color: $cPrinc
           font-weight: 700
+      .inner-section-first-home
+        .elementor-container
+          height: unset
+          min-height: unset
+          .inner-col-first-home
+            .elementor-widget-wrap
+              flex-direction: column
+              .btn-form-princ:first-of-type
+                margin-bottom: 30px!important
 
 
-.section-title-left-bb
-  padding: 50px 0
-  background-color: $cSecond
-  .col-title-left-bb
-    .elementor-widget-wrap
-      @include FlexColumnCenterH
-    &:before
-      content: ''
-      background-image: url("../icons/icon-d-yellow-op13.svg")
-      @include BgContain
-      width: 75px
-      height: calc(#{$lineHeightH3} + #{$lineHeightH4} * 2)
-      display: block
-      margin-right: 20px
+
 
 .section-bb
   padding: 50px 0 80px 0px
@@ -140,57 +136,18 @@
                 width: 33px
                 height: 33px
                 margin-right: 10px
-        .btn-sites
-          @include BtnFormPrinc
-          background-color: $cPrinc
-          border-color: $cPrinc!important
-          margin: 0 auto 20px auto
-          a
-            color: $cSecond
-          &:hover
-            transition: $durationTransition
-            opacity: .9
-        &:nth-of-type(1)
-          margin-right: 45px
+      .inner-col-sites:first-of-type
+        margin-right: 20px
+
 
 .section-b-v3
   background-color: $cThirdVariant2
 
 .section-site-vitrine
-  padding: 65px 0 100px 0
+  padding: 0px 0 130px 0
   .col-content-primary
-    .btn-site-vitrine
-      width: auto
-      margin-top: 30px
-      border-color: $cPrinc!important
-      background-color: $cPrinc
-      .elementor-widget-container
-        .elementor-button-wrapper
-          a
-            color: $cWhite
-            span
-              font-size: 18px
-              font-family: 'ChillaxM'!important
-      &:hover
-        opacity: .9
-        .elementor-widget-container
-          .elementor-button-wrapper
-            a
-              color: $cWhite
-            &:hover
-              transition: $durationTransition
-
-.section-title-specs-w
-  padding: 80px 0
-  .col-title-specs-w
-    .title-specs-w
-      color: $cSecond
-      max-width: 600px
-      text-align: center
-      margin: auto
-      &:after
-        display: none
-
+    .txt-primary-content
+      margin-bottom: 50px
 
 
 .section-specs-w
@@ -205,7 +162,10 @@
       .img-specs
 
 .first-section-s-w
-  padding-bottom: 80px
+  padding-bottom: 100px
+
+.last-section-s-w
+  padding-bottom: 100px
 
 
 
@@ -213,6 +173,91 @@
   padding: 100px 0 0 0
 
 .section-websites-achievements
+  background-color: $cSecond
+  padding-bottom: 500px
+  overflow: hidden
+  .elementor-container
+    max-width: 800px!important
+    .col-swiper-achievements
+      .swiper-projects
+        overflow: visible
+        .swiper-wrapper
+          .swiper-slide-prev, .swiper-slide-next
+            opacity: .1
+            .bloc-swiper
+              display: none!important
+          .swiper-slide
+            position: relative
+            display: flex
+            align-items: center
+            flex-direction: column
+            .img-project-swiper
+              z-index: 99
+              border: solid 4px $cWhite
+              @include BoxShadowImg
+            .bloc-swiper
+              display: flex
+              flex-direction: column
+              position: absolute
+              background-color: $cPrinc
+              color: $cWhite
+              width: 100%
+              bottom: 0
+              top: 0
+              height: 150%
+              padding-top: 38%
+              padding-left: 50px
+              transform: translate(-50px, 30%)
+              border-radius: 0 0 0 80px
+              @include BoxShadow
+              .type-project-swiper, .title-project-swiper
+                font-size: 28px
+                line-height: 32px
+                text-transform: uppercase
+              .type-project-swiper
+                font-family: 'ChillaxSB'
+              .title-project-swiper
+                font-family: 'ChillaxM'
+              .context-project-swiper
+                padding-top: 25px
+                color: $cWhite!important
+                max-width: 70%
+              .link-project-swiper
+                display: flex
+                margin-top: 25px
+                color: $cWhite!important
+                text-decoration: underline
+                &:after
+                  content: ''
+                  display: inline-block
+                  @include BgContain
+                  margin-left: 5px
+                  width: 30px
+                  background-image: url("../icons/icon-link-project.svg")
+
+        .swiper-button-prev, .swiper-button-next
+          width: 55px
+          height: 55px
+          &:after
+            content: ''
+            width: 50px
+            height: 50px
+            @include BgContain
+        .swiper-button-prev
+          left: -20%
+          background-image: url("../icons/arrow-prev-slide-ach.svg")
+        .swiper-button-next
+          right: -15%
+          background-image: url("../icons/arrow-next-slide-ach.svg")
+
+
+
+
+
+
+
+
+//.section-websites-achievements
   background-color: $cSecond
   overflow: hidden
   height: 600px
@@ -259,6 +304,16 @@
     .img-e-site
   .col-content-e-site, .col-content-r-s
     .title-w-check
+      padding-bottom: 20px
+      @include FlexCenterH
+      &:before
+        content: ''
+        display: block
+        background-image: url("../icons/check-yellow-blue.svg")
+        width: 30px
+        height: 30px
+        margin-right: 10px
+        @include BgContain
     .txt-content-e-site, .txt-content-r-s
       color: $cSecond
       padding-bottom: 50px
