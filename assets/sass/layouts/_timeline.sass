@@ -1,60 +1,89 @@
 @import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
 @import "../../../../nicolasdelacroix/assets/sass/utils/variables"
 
-.section-title-timeline
-  padding: 100px 0px 70px 0!important
-
-.section-timeline-step
-  min-height: $heightStep
+.section-title-step
+  padding-bottom: 70px
+.section-step
+  padding: 70px 0
   .elementor-container
-    min-height: $heightStep
-    max-width: 1600px!important
-    .col-img-step, .col-content-step, .col-number-step
-      .elementor-widget-wrap
-        align-content: center
-    .col-img-step, .col-content-step
-      width: 37.5%!important
     .col-img-step
-      .img-step
-        height: 100%
-        .elementor-widget-container
-          height: 100%
-          @include FlexCenterH
+      min-width: 650px
+      .elementor-widget-wrap
+        //justify-content: center
+        .img-step
+        .img-secondary
           img
+            height: 450px
             object-fit: cover
-            width: auto
-            height: 80%
-            border-radius: $BorderRadiusElts
-            @include BoxShadowImg
-    .col-number-step
-      width: 25%!important
-      .img-number-step
-        position: unset
-        .elementor-widget-container
-          img
-            width: 85px
-          &:after
-            position: absolute
-            left: 50%
-            content: ''
-            height: calc( 100% - 85px )
-            width: 1px
-            background-color: $cPrinc
-            display: block
-      .last-img-number-step
-        .elementor-widget-container
-          img
-          &:after
-            display: none
+    .col-left
+      padding-right: 20px
+    .col-right
+      padding-left: 20px
     .col-content-step
-      .span-content-step, .txt-content-step
-        span, p
-          color: $cSecond
-      .span-content-step
-        font-size: 24px
-        span
+      .step
+        text-transform: uppercase
+        color: $cSecond
+        font-size: 21px
+        margin-bottom: 10px
+        .elementor-widget-container, span
           font-family: 'ChillaxSB'
-      .txt-content-step
+          span
+            color: $cPrinc
+      .title-step
+        span
+          font-size: 26px!important
+      .txt-step
+        max-width: 600px
 
-.last-section-timeline
-  padding-bottom: 50px
+.top-section-step
+  padding-top: 0px
+.bottom-section-step
+  padding-bottom: 150px
+
+@media (max-width: 1200px)
+  .section-title-step
+    padding-bottom: 50px
+
+  .section-step
+    padding-bottom: 150px
+    padding-top: 0px
+    .elementor-container
+      .col-img-step
+        width: 60%
+        padding-top: 50px
+        .elementor-widget-wrap
+          justify-content: center
+      .col-content-step
+        width: 800px
+        .txt-step
+          max-width: unset
+  .section-step-reverse
+    .elementor-container
+      flex-direction: column-reverse!important
+
+
+@media (max-width: 900px)
+  .section-step
+    .elementor-container
+      .col-img-step
+        min-width: unset
+      .col-content-step, .col-img-step
+        width: 100%
+        .img-secondary
+          width: 100%
+          .elementor-widget-container
+            &:after
+              right: 0px
+
+@media (max-width: 650px)
+  .section-step
+    .elementor-container
+      .col-img-step
+        .elementor-widget-wrap
+          .img-secondary
+            img
+              height: 280px
+
+@media (max-width: 570px)
+  .section-title-step
+    padding-bottom: 0px

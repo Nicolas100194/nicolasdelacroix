@@ -16,33 +16,88 @@
       background-color: $cWhite
       @include BoxShadow
       color: $cSecond
-      .inner-col-qa-content, .inner-col-icon-reply
-        padding: 20px
-      .inner-col-qa-content
-        width: 90%!important
-        .title-question
-          font-weight: 600
-          text-transform: uppercase
-          letter-spacing: 1px
-          font-size: 13px
-          margin-bottom: 0px
-          h3
-            line-height: 20px
-        .txt-reply
-          font-size: 16px
-          line-height: 25px
-          padding-top: 20px
-          transition: .3s
-        .txt-reply-hidden
-          padding-top: 0px!important
-          overflow: hidden
-          height: 0px
-          transition: .3s
-      .inner-col-icon-reply
-        width: 10%!important
-        .elementor-widget-wrap
-          align-content: center
-          .icon-display-reply
-            cursor: pointer
-      &:nth-of-type(2)
-        margin: 20px 0
+      margin-bottom: 10px
+      padding: 20px
+      .elementor-container
+        padding: 0px
+        justify-content: space-between
+        .inner-col-qa-content, .inner-col-icon-reply
+        .inner-col-qa-content
+          width: 90%
+          .title-question
+            font-weight: 600
+            text-transform: uppercase
+            letter-spacing: 1px
+            font-size: 13px
+            margin-bottom: 0px
+            h3
+              line-height: 20px
+          .txt-reply
+            font-size: 16px
+            line-height: 25px
+            padding-top: 20px
+            transition: .3s
+          .txt-reply-hidden
+            padding-top: 0px!important
+            overflow: hidden
+            height: 0px
+            transition: .3s
+        .inner-col-icon-reply
+          width: 10%
+          padding: 0px
+          .elementor-widget-wrap
+            align-content: center
+            .icon-display-reply
+              cursor: pointer
+              img
+                width: 30px
+        &:nth-of-type(2)
+          margin: 20px 0
+
+@media (max-width: 1200px)
+  .section-qa
+    .elementor-container
+      //flex-direction: row
+      .col-img-qa, .col-content-qa
+        width: 800px
+      .col-img-qa
+        padding-bottom: 50px
+      .col-content-qa
+        .title-content-qa
+          text-align: center
+        .inner-section-qa
+          .elementor-container
+            flex-direction: row
+
+@media (max-width: 900px)
+  .section-qa
+    .elementor-container
+      .col-img-qa, .col-content-qa
+        width: 100%
+
+@media (max-width: 750px)
+  .section-qa
+    .col-content-qa
+      .inner-section-qa
+        //padding-right: 20px
+        .elementor-container
+          flex-direction: row
+          .inner-col-icon-reply
+            //width: 10%
+
+@media (max-width: 480px)
+  .section-qa
+    .elementor-container
+      .col-content-qa
+        .inner-section-qa
+          padding: 20px 10px
+          .elementor-container
+            flex-direction: column
+            .inner-col-qa-content
+              width: 100%
+              padding-bottom: 20px
+              .title-question
+                text-align: center
+                //padding-bottom: 20px
+
+

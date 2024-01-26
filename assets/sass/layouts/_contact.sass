@@ -45,18 +45,77 @@
             &:nth-of-type(2)
               padding-left: 25px
           p
+            //width: 100%
             .wpcf7-submit
-              margin-top: 50px
-              border-color: $cPrinc
-              color: $cWhite
+              margin-top: 30px
+              border: none
+              padding: 0 20px
               background-color: $cPrinc
-              padding: 0 25px
-              font-family: 'ChillaxSB'
-              font-size: 18px
+              color: $cWhite
+              font-weight: 600
+            .wpcf7-spinner
+              display: none
           p:first-of-type
             width: 100%
             textarea
               width: 100%
 
+@media (max-width: 1200px)
+  .section-contact
+    .elementor-container
+      .col-img-contact
+        width: 30%
+      .col-form-contact
+        width: 70%
 
 
+@media (max-width: 900px)
+  .section-contact
+    .elementor-container
+      flex-direction: column
+      .col-img-contact, .col-form-contact
+        width: 100%
+        .title-form
+          margin: auto
+      .col-img-contact
+        img
+          max-height: 300px
+      .col-form-contact
+        padding: 20px
+        .txt-form
+          text-align: center
+          padding-bottom: 30px
+        .form
+          .wpcf7-form
+            fieldset
+            p
+              width: 100%
+              .wpcf7-submit
+                display: block
+                width: 50%!important
+                min-width: 250px
+                margin: 20px auto
+
+
+@media (max-width: 800px)
+  .section-contact
+    .elementor-container
+      .col-form-contact
+        .form
+          .wpcf7-form
+            fieldset
+              width: 100%
+              &:first-of-type
+                padding-right: 0px
+              &:nth-of-type(2)
+                padding-left: 0px
+
+@media (max-width: 420px)
+  .section-contact
+    .elementor-container
+      .col-form-contact
+        .form
+          .wpcf7-form
+            p
+              .wpcf7-submit
+                min-width: 100%

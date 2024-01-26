@@ -1,10 +1,15 @@
 (function($){
     $('document').ready(function(){
-        const swiper = new Swiper('.swiper-ecommerce',{
+        const swiper2 = new Swiper('.swiper-ecommerce',{
             autoplay: false,
-            slidesPerView: 2,
+            slidesPerView: 1,
             loop: true,
             spaceBetween: 30,
+            breakpoints: {
+                870: {
+                    slidesPerView: 2
+                }
+            },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -13,6 +18,7 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+
         })
     })
 })(jQuery);

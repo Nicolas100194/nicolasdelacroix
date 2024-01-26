@@ -1,6 +1,6 @@
 (function($){
     $('document').ready(function(){
-        const swiper = new Swiper('.swiper-projects',{
+        const swiperP = new Swiper('.swiper-projects',{
             autoplay: false,
             slidesPerView: 1,
             loop: true,

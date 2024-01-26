@@ -22,9 +22,10 @@
   background-color: $cSecond
   padding: 80px 0
   .elementor-container
-    max-width: 1600px!important
+    max-width: 1640px!important
+    padding: 0 50px
     .col-content-eshop
-      padding-right: 50px
+      padding-right: 70px
       .elementor-widget-wrap
         align-content: center
         .title-eshop
@@ -47,6 +48,7 @@
               background-color: $cThirdVariant3
               @include BoxShadow
               padding: 30px
+              min-height: 660px
               .icon-slide
                 height: 50px
                 width: 50px
@@ -69,16 +71,17 @@
               height: 50px
               @include BgContain
           .swiper-button-prev
-            left: 30%
+            left: 31%
             &:after
               background-image: url("../icons/prev-swiper-eshop.svg")
           .swiper-button-next
-            right: -3%
+            right: 0
             &:after
               background-image: url("../icons/next-swiper-eshop.svg")
           .swiper-pagination
             position: absolute
             width: auto
+            left: 40px
             .swiper-pagination-bullet
               background-color: transparent
               border: solid 2px $cWhite
@@ -88,3 +91,40 @@
             .swiper-pagination-bullet, .swiper-pagination-bullet-active
               width: 15px
               height: 15px
+
+@media (max-width: 1200px)
+  .section-swiper-eshop
+    .elementor-container
+      flex-direction: column
+      align-items: center
+      .col-content-eshop
+        padding: 0
+        width: 80%
+        margin-bottom: 50px
+        .title-eshop, .txt-eshop
+          text-align: center
+      .col-swiper-eshop
+        width: 100%
+        .elementor-widget-wrap
+          .swiper-eshop
+            .swiper-ecommerce
+              .swiper-pagination
+                left: 50%
+                transform: translateX(-50%)
+                bottom: -50px
+              .swiper-button-prev
+                left: 10px
+                top: 65%
+              .swiper-button-next
+                right: 10px
+                top: 65%
+
+@media (max-width: 870px)
+  .section-swiper-eshop
+    .elementor-container
+      .col-swiper-eshop
+        .elementor-widget-wrap
+          .swiper-eshop
+            .swiper-ecommerce
+              .swiper-slide
+                //width: 100%!important

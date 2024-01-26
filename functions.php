@@ -10,6 +10,8 @@ function theme_NicolasDelacroix_register_assets(){
     wp_enqueue_script('swiper-projects.js', get_stylesheet_directory_uri().'/assets/js/swiper-projects.js', array(), null, true);
     wp_enqueue_script('questions-reply.js', get_stylesheet_directory_uri().'/assets/js/questions-reply.js', array(), null, true);
     wp_enqueue_script('sub-menu.js', get_stylesheet_directory_uri().'/assets/js/sub-menu.js', array(), null, true);
+    wp_enqueue_script('menu-responsive.js', get_stylesheet_directory_uri().'/assets/js/menu-responsive.js', array(), null, true);
+
 }
 
 function theme_NicolasDelacroix_supports(){
@@ -163,3 +165,4 @@ add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
 
 
 register_nav_menu('header', 'menu principal');
+register_nav_menu('header-mobile', 'menu mobile');
