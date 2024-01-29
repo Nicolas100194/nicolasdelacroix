@@ -202,38 +202,44 @@ header
 
 @media (max-width: 600px)
   header
-    display: block
-    height: fit-content
-    padding: 15px 15px
+    //display: block
+    //height: fit-content
+    padding: 0 15px
     .logo-header-desktop
       .logo-default
         display: block
-        margin: 0 auto 20px auto
+        margin: 0 auto 0px auto
         height: 85px
     .container-logo-mobile
       width: fit-content
-      margin: auto
       .logo-menu-mobile
-        height: auto
+        display: flex
+        height: 100%
         transform: unset
         img
-          transform: unset
+
     .menu-mobile-display
-      transform: translateY(50px)
+      //transform: translateY(65px)
+
+@media (max-width: 510px)
+  header
+    .logo-header-desktop
+      .logo-default
+        height: 75px
 
 @media (max-width: 460px)
   header
-    min-height: 165px
     .logo-header-desktop
       .logo-default
-        height: auto
-        width: 100%
-        margin: 0 auto
-    .container-logo-mobile
-      position: absolute
-      bottom: 20px
-      left: 50%
-      transform: translateX(-50%)
+        height: 65px
+
+@media (max-width: 400px)
+  header
+    //padding: 0 5px
+    .logo-header-desktop
+      .logo-default
+        height: 55px
+
 
 
 @keyframes MenuDisplay

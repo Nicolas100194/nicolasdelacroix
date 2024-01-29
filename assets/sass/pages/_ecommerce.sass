@@ -26,8 +26,14 @@
     padding: 0 50px
     .col-content-eshop
       padding-right: 70px
+      align-items: center
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      height: fit-content
       .elementor-widget-wrap
         align-content: center
+        height: fit-content
         .title-eshop
           color: $cPrinc
           h2
@@ -37,33 +43,41 @@
           color: $cBlueVariant!important
     .col-swiper-eshop
       position: unset
+      padding-left: 33%
+      width: 100%
       .elementor-widget-wrap
         position: unset
         .swiper-eshop
           position: unset
           .swiper-ecommerce
             position: unset
-            .swiper-slide
-              border-radius: $BorderRadiusElts
-              background-color: $cThirdVariant3
-              @include BoxShadow
-              padding: 30px
-              min-height: 660px
-              .icon-slide
-                height: 50px
-                width: 50px
-                background-image: url("../icons/analys.svg")
-                @include BgContain
-              .container-title-slide
-                padding: 30px 0
-                .title-slide
-                  color: $cWhite
-                  text-transform: uppercase
-                  font-family: 'ChillaxSB'
-                  font-size: 24px
-              .container-txt-slide
-                .txt-slide
-                  color: $cBlueVariant!important
+            .swiper-wrapper
+              align-items: stretch
+              height: unset
+              .swiper-slide
+                border-radius: $BorderRadiusElts
+                background-color: $cThirdVariant3
+                @include BoxShadow
+                padding: 30px
+                min-height: 660px
+                display: flex
+                flex-direction: column
+
+                .icon-slide
+                  height: 50px
+                  width: 50px
+                  background-image: url("../icons/analys.svg")
+                  @include BgContain
+                .container-title-slide
+                  padding: 30px 0
+                  .title-slide
+                    color: $cWhite
+                    text-transform: uppercase
+                    font-family: 'ChillaxSB'
+                    font-size: 24px
+                .container-txt-slide
+                  .txt-slide
+                    color: $cBlueVariant!important
           .swiper-button-prev, .swiper-button-next
             &:after
               content: ''
@@ -82,6 +96,7 @@
             position: absolute
             width: auto
             left: 40px
+            bottom: 30%
             .swiper-pagination-bullet
               background-color: transparent
               border: solid 2px $cWhite
@@ -92,39 +107,74 @@
               width: 15px
               height: 15px
 
-@media (max-width: 1200px)
+@media (max-width: 1700px)
   .section-swiper-eshop
+    padding: 50px 0 100px 0
     .elementor-container
       flex-direction: column
       align-items: center
       .col-content-eshop
         padding: 0
-        width: 80%
+        width: 100%
         margin-bottom: 50px
+        position: unset
+        transform: unset
         .title-eshop, .txt-eshop
           text-align: center
       .col-swiper-eshop
-        width: 100%
+        width: 1050px
+        position: relative
+        padding-left: unset
         .elementor-widget-wrap
           .swiper-eshop
             .swiper-ecommerce
+              //position: relative!important
               .swiper-pagination
                 left: 50%
                 transform: translateX(-50%)
                 bottom: -50px
               .swiper-button-prev
-                left: 10px
-                top: 65%
+                top: 50%
+                left: -40px
               .swiper-button-next
-                right: 10px
-                top: 65%
+                right: 50%
+                right: -40px
 
-@media (max-width: 870px)
+
+@media (max-width: 1200px)
+  .section-swiper-eshop
+    padding: 50px 0 80px 0
+    .elementor-container
+      .col-content-eshop
+        margin-bottom: 50px
+      .col-swiper-eshop
+        width: 600px
+        .elementor-widget-wrap
+          .swiper-eshop
+            .swiper-ecommerce
+              .swiper-wrapper
+                align-items: center
+                .swiper-slide
+                  min-height: unset
+                  align-items: center
+                  text-align: center
+
+@media (max-width: 720px)
   .section-swiper-eshop
     .elementor-container
+      .col-swiper-eshop
+        width: 100%
+
+@media (max-width: 500px)
+  .section-swiper-eshop
+    .elementor-container
+      padding: 0 20px
       .col-swiper-eshop
         .elementor-widget-wrap
           .swiper-eshop
             .swiper-ecommerce
-              .swiper-slide
-                //width: 100%!important
+              .swiper-wrapper
+                .swiper-slide
+                  padding: 15px
+              .swiper-button-next, .swiper-button-prev
+                display: none

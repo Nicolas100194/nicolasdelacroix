@@ -9,6 +9,7 @@ function theme_NicolasDelacroix_register_assets(){
     wp_enqueue_script('swiperjs-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js');
     wp_enqueue_script('swiper-projects.js', get_stylesheet_directory_uri().'/assets/js/swiper-projects.js', array(), null, true);
     wp_enqueue_script('questions-reply.js', get_stylesheet_directory_uri().'/assets/js/questions-reply.js', array(), null, true);
+    wp_enqueue_script('redirect.js', get_stylesheet_directory_uri().'/assets/js/redirect.js', array(), null, true);
     wp_enqueue_script('sub-menu.js', get_stylesheet_directory_uri().'/assets/js/sub-menu.js', array(), null, true);
     wp_enqueue_script('menu-responsive.js', get_stylesheet_directory_uri().'/assets/js/menu-responsive.js', array(), null, true);
 
@@ -115,42 +116,41 @@ function display_cpt_typesite(){
 //SHORTCODES
 
 function get_project_for_swiper(){
-    $args = array(
-        'post_type' => 'projets'
-    );
-    $query = new WP_Query($args);
-    echo <<<HTML
+        $args = array(
+            'post_type' => 'projets'
+        );
+        $query = new WP_Query($args);
+        echo <<<HTML
     <div class="swiper swiper-projects">
         <div class="swiper-wrapper">
 HTML;
-    if($query->have_posts()){
-        while($query->have_posts()){
-            $query->the_post();
-            echo "<div class=\"swiper-slide\">";
-            display_cpt_img();
-            echo "<div class=\"bloc-swiper\">";
-            display_cpt_typesite();
-            echo "<span class=\"title-project-swiper\">";
-            display_cpt_title();
-            echo "</span>";
-            display_cpt_context();
-            echo "<a class=\"link-project-swiper p\" href='". get_link_cpt() . "'>Voir projet</a>";
-            echo "</div></div>";
+        if($query->have_posts()){
+            while($query->have_posts()){
+                $query->the_post();
+                echo "<div class=\"swiper-slide\">";
+                display_cpt_img();
+                echo "<div class=\"bloc-swiper\">";
+                display_cpt_typesite();
+                echo "<span class=\"title-project-swiper\">";
+                display_cpt_title();
+                echo "</span>";
+                display_cpt_context();
+                echo "<a class=\"link-project-swiper p\" href='". get_link_cpt() . "'>Voir projet</a>";
+                echo "</div></div>";
+            }
         }
-    }
-    echo <<<HTML
+        echo <<<HTML
         </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     </div>
 HTML;
-};
+}
 
+if (!current_user_can('manage_options')) {
+    add_shortcode('get_project_for_swiper', 'get_project_for_swiper');
+}
 
-
-
-
-add_shortcode('get_project_for_swiper', 'get_project_for_swiper');
 add_action('init', 'theme_NicolasDelacroix_post_type');
 add_action('after_setup_theme','theme_NicolasDelacroix_supports');
 add_action('display_cpt_title', 'display_cpt_title');

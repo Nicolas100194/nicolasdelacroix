@@ -5,6 +5,7 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,11 +28,6 @@ body {
   padding-top: 140px;
 }
 
-@media (max-width: 600px) {
-  .elementor {
-    padding-top: 164px;
-  }
-}
 .section-b {
   background-color: #2D435A;
 }
@@ -523,7 +519,7 @@ body {
 }
 @media (max-width: 500px) {
   .section-title-site-vitrine {
-    padding: 50px 20px;
+    padding: 70px 20px;
   }
 }
 .section-title-specs-website {
@@ -543,10 +539,20 @@ body {
   padding: 50px 0 100px 0;
 }
 
+@media (max-width: 1200px) {
+  .section-title-best-website {
+    padding: 70px 20px;
+  }
+}
 .section-title-stats {
   padding: 80px 0 !important;
 }
 
+@media (max-width: 1200px) {
+  .section-title-stats {
+    padding: 70px 20px !important;
+  }
+}
 .title-h1, .title-h2, .title-h5 {
   width: auto !important;
   margin-bottom: 0px !important;
@@ -944,44 +950,35 @@ header .menu-mobile {
 }
 @media (max-width: 600px) {
   header {
-    display: block;
-    height: fit-content;
-    padding: 15px 15px;
+    padding: 0 15px;
   }
   header .logo-header-desktop .logo-default {
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 0px auto;
     height: 85px;
   }
   header .container-logo-mobile {
     width: fit-content;
-    margin: auto;
   }
   header .container-logo-mobile .logo-menu-mobile {
-    height: auto;
+    display: flex;
+    height: 100%;
     transform: unset;
   }
-  header .container-logo-mobile .logo-menu-mobile img {
-    transform: unset;
-  }
-  header .menu-mobile-display {
-    transform: translateY(50px);
+}
+@media (max-width: 510px) {
+  header .logo-header-desktop .logo-default {
+    height: 75px;
   }
 }
 @media (max-width: 460px) {
-  header {
-    min-height: 165px;
-  }
   header .logo-header-desktop .logo-default {
-    height: auto;
-    width: 100%;
-    margin: 0 auto;
+    height: 65px;
   }
-  header .container-logo-mobile {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+}
+@media (max-width: 400px) {
+  header .logo-header-desktop .logo-default {
+    height: 55px;
   }
 }
 @keyframes MenuDisplay {
@@ -1031,10 +1028,26 @@ header .menu-mobile {
 .section-contact .elementor-container .col-form-contact .form .wpcf7-form input {
   margin: 10px 0px 30px 0px;
   height: 45px;
+  font-size: 16px;
+  color: #2D435A;
+  font-weight: 600;
 }
 .section-contact .elementor-container .col-form-contact .form .wpcf7-form fieldset {
   border-style: none;
   width: 50%;
+}
+.section-contact .elementor-container .col-form-contact .form .wpcf7-form fieldset p {
+  position: relative;
+}
+.section-contact .elementor-container .col-form-contact .form .wpcf7-form fieldset p label {
+  position: unset;
+}
+.section-contact .elementor-container .col-form-contact .form .wpcf7-form fieldset p label .wpcf7-form-control-wrap {
+  position: unset;
+}
+.section-contact .elementor-container .col-form-contact .form .wpcf7-form fieldset p label .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+  position: absolute;
+  bottom: 10px;
 }
 .section-contact .elementor-container .col-form-contact .form .wpcf7-form fieldset p, .section-contact .elementor-container .col-form-contact .form .wpcf7-form fieldset span, .section-contact .elementor-container .col-form-contact .form .wpcf7-form fieldset input {
   width: 100%;
@@ -1047,6 +1060,7 @@ header .menu-mobile {
 }
 .section-contact .elementor-container .col-form-contact .form .wpcf7-form p .wpcf7-submit {
   margin-top: 30px;
+  cursor: pointer;
   border: none;
   padding: 0 20px;
   background-color: #DAA000;
@@ -1210,9 +1224,17 @@ header .menu-mobile {
     height: 280px;
   }
 }
-@media (max-width: 570px) {
-  .section-title-step {
-    padding-bottom: 0px;
+@media (max-width: 500px) {
+  .section-step {
+    padding-bottom: 70px;
+  }
+  .section-step .elementor-container .col-content-step .step, .section-step .elementor-container .col-content-step .title-step {
+    text-align: center;
+  }
+  .section-step .elementor-container .col-content-step .title-step {
+    border-left: none;
+    padding: 0 0 20px 0;
+    border-bottom: solid 3px #DAA000;
   }
 }
 .section-qa {
@@ -1757,6 +1779,8 @@ header .menu-mobile {
 }
 .section-e-site .col-content-e-site .txt-content-e-site, .section-e-site .col-content-e-site .txt-content-r-s, .section-e-site .col-content-r-s .txt-content-e-site, .section-e-site .col-content-r-s .txt-content-r-s, .section-r-s .col-content-e-site .txt-content-e-site, .section-r-s .col-content-e-site .txt-content-r-s, .section-r-s .col-content-r-s .txt-content-e-site, .section-r-s .col-content-r-s .txt-content-r-s {
   color: #2D435A;
+}
+.section-e-site .col-content-e-site .txt-content-r-s, .section-e-site .col-content-r-s .txt-content-r-s, .section-r-s .col-content-e-site .txt-content-r-s, .section-r-s .col-content-r-s .txt-content-r-s {
   padding-bottom: 50px;
 }
 
@@ -1993,29 +2017,6 @@ header .menu-mobile {
     width: 100%;
   }
 }
-@media (max-width: 650px) {
-  .section-websites-achievements .elementor-container {
-    width: 95%;
-  }
-  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-wrapper .swiper-slide .bloc-swiper {
-    padding: 15px;
-  }
-  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-wrapper .swiper-slide .bloc-swiper .type-project-swiper, .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-wrapper .swiper-slide .bloc-swiper .title-project-swiper {
-    font-size: 24px;
-  }
-  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-button-next, .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-button-prev {
-    width: 35px;
-    height: 35px;
-    background-size: contain;
-    top: 20%;
-  }
-  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-button-prev {
-    left: -5%;
-  }
-  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-button-next {
-    right: -5%;
-  }
-}
 @media (max-width: 680px) {
   .section-bb .elementor-container .col-left .inner-section-sites .elementor-container {
     flex-direction: column;
@@ -2045,6 +2046,36 @@ header .menu-mobile {
     margin-bottom: 50px;
   }
 }
+@media (max-width: 650px) {
+  .section-websites-achievements {
+    padding-bottom: 100px;
+  }
+  .section-websites-achievements .elementor-container {
+    width: 100%;
+  }
+  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-wrapper .swiper-slide .bloc-swiper {
+    padding: 15px;
+    min-height: 350px;
+    justify-content: center;
+  }
+  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-wrapper .swiper-slide .bloc-swiper .type-project-swiper, .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-wrapper .swiper-slide .bloc-swiper .title-project-swiper {
+    font-size: 24px;
+  }
+  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-button-next, .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-button-prev {
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    top: unset !important;
+  }
+  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-button-prev {
+    bottom: -75px;
+    left: 35%;
+  }
+  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-button-next {
+    bottom: -75px;
+    right: 35%;
+  }
+}
 @media (max-width: 600px) {
   .section-first-home .elementor-container {
     padding-top: 65px;
@@ -2052,6 +2083,14 @@ header .menu-mobile {
   .section-first-home .elementor-container .col-img .elementor-widget-wrap .the-swiper::after, .section-first-home .elementor-container .col-img .elementor-widget-wrap .the-swiper::before {
     width: 80px;
     height: 80px;
+  }
+
+  .section-specs-w .elementor-container .col-content-specs .txt-content-specs, .section-specs-w .elementor-container .col-content-specs .txt-content-e-site, .section-specs-w .elementor-container .col-content-specs .context-project-swiper, .section-specs-w .elementor-container .col-content-e-site .txt-content-specs, .section-specs-w .elementor-container .col-content-e-site .txt-content-e-site, .section-specs-w .elementor-container .col-content-e-site .context-project-swiper, .section-specs-w .elementor-container .col-swiper-achievements .txt-content-specs, .section-specs-w .elementor-container .col-swiper-achievements .txt-content-e-site, .section-specs-w .elementor-container .col-swiper-achievements .context-project-swiper, .section-e-site .elementor-container .col-content-specs .txt-content-specs, .section-e-site .elementor-container .col-content-specs .txt-content-e-site, .section-e-site .elementor-container .col-content-specs .context-project-swiper, .section-e-site .elementor-container .col-content-e-site .txt-content-specs, .section-e-site .elementor-container .col-content-e-site .txt-content-e-site, .section-e-site .elementor-container .col-content-e-site .context-project-swiper, .section-e-site .elementor-container .col-swiper-achievements .txt-content-specs, .section-e-site .elementor-container .col-swiper-achievements .txt-content-e-site, .section-e-site .elementor-container .col-swiper-achievements .context-project-swiper, .section-websites-achievements .elementor-container .col-content-specs .txt-content-specs, .section-websites-achievements .elementor-container .col-content-specs .txt-content-e-site, .section-websites-achievements .elementor-container .col-content-specs .context-project-swiper, .section-websites-achievements .elementor-container .col-content-e-site .txt-content-specs, .section-websites-achievements .elementor-container .col-content-e-site .txt-content-e-site, .section-websites-achievements .elementor-container .col-content-e-site .context-project-swiper, .section-websites-achievements .elementor-container .col-swiper-achievements .txt-content-specs, .section-websites-achievements .elementor-container .col-swiper-achievements .txt-content-e-site, .section-websites-achievements .elementor-container .col-swiper-achievements .context-project-swiper {
+    text-align: justify;
+  }
+
+  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-wrapper .swiper-slide .bloc-swiper .type-project-swiper, .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-wrapper .swiper-slide .bloc-swiper .title-project-swiper {
+    text-align: center;
   }
 }
 @media (max-width: 570px) {
@@ -2067,6 +2106,18 @@ header .menu-mobile {
   }
   .section-bb .elementor-container .col-left .inner-section-sites .elementor-container .inner-col-sites .list-sites ul li span {
     font-size: 18px;
+  }
+
+  .section-websites-achievements .elementor-container {
+    padding: 0;
+  }
+}
+@media (max-width: 400px) {
+  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-button-prev {
+    left: 5%;
+  }
+  .section-websites-achievements .elementor-container .col-swiper-achievements .swiper-projects .swiper-button-next {
+    right: 5%;
   }
 }
 .section-head-website {
@@ -2260,10 +2311,6 @@ header .menu-mobile {
     width: 800px;
   }
 
-  .section-title-best-website {
-    padding-bottom: 50px;
-  }
-
   .section-best-website .elementor-container .col-content-best-website {
     width: 800px;
   }
@@ -2302,6 +2349,10 @@ header .menu-mobile {
   }
 }
 @media (max-width: 900px) {
+  .section-head-website {
+    padding: 40px 20px !important;
+  }
+
   .section-head-website, .section-what-website-v, .section-best-website {
     padding: 0px 20px;
   }
@@ -2381,9 +2432,15 @@ header .menu-mobile {
 }
 .section-swiper-eshop .elementor-container .col-content-eshop {
   padding-right: 70px;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: fit-content;
 }
 .section-swiper-eshop .elementor-container .col-content-eshop .elementor-widget-wrap {
   align-content: center;
+  height: fit-content;
 }
 .section-swiper-eshop .elementor-container .col-content-eshop .elementor-widget-wrap .title-eshop {
   color: #DAA000;
@@ -2397,6 +2454,8 @@ header .menu-mobile {
 }
 .section-swiper-eshop .elementor-container .col-swiper-eshop {
   position: unset;
+  padding-left: 33%;
+  width: 100%;
 }
 .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap {
   position: unset;
@@ -2407,14 +2466,20 @@ header .menu-mobile {
 .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce {
   position: unset;
 }
-.section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-slide {
+.section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-wrapper {
+  align-items: stretch;
+  height: unset;
+}
+.section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-wrapper .swiper-slide {
   border-radius: 26px;
   background-color: rgba(125, 149, 175, 0.1);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
   padding: 30px;
   min-height: 660px;
+  display: flex;
+  flex-direction: column;
 }
-.section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-slide .icon-slide {
+.section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-wrapper .swiper-slide .icon-slide {
   height: 50px;
   width: 50px;
   background-image: url("../icons/analys.svg");
@@ -2422,16 +2487,16 @@ header .menu-mobile {
   background-size: contain;
   background-position: center;
 }
-.section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-slide .container-title-slide {
+.section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-wrapper .swiper-slide .container-title-slide {
   padding: 30px 0;
 }
-.section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-slide .container-title-slide .title-slide {
+.section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-wrapper .swiper-slide .container-title-slide .title-slide {
   color: #FFFF;
   text-transform: uppercase;
   font-family: "ChillaxSB";
   font-size: 24px;
 }
-.section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-slide .container-txt-slide .txt-slide {
+.section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-wrapper .swiper-slide .container-txt-slide .txt-slide {
   color: #DDE5ED !important;
 }
 .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-button-prev:after, .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-button-next:after {
@@ -2458,6 +2523,7 @@ header .menu-mobile {
   position: absolute;
   width: auto;
   left: 40px;
+  bottom: 30%;
 }
 .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-pagination .swiper-pagination-bullet {
   background-color: transparent;
@@ -2472,21 +2538,28 @@ header .menu-mobile {
   height: 15px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1700px) {
+  .section-swiper-eshop {
+    padding: 50px 0 100px 0;
+  }
   .section-swiper-eshop .elementor-container {
     flex-direction: column;
     align-items: center;
   }
   .section-swiper-eshop .elementor-container .col-content-eshop {
     padding: 0;
-    width: 80%;
+    width: 100%;
     margin-bottom: 50px;
+    position: unset;
+    transform: unset;
   }
   .section-swiper-eshop .elementor-container .col-content-eshop .title-eshop, .section-swiper-eshop .elementor-container .col-content-eshop .txt-eshop {
     text-align: center;
   }
   .section-swiper-eshop .elementor-container .col-swiper-eshop {
-    width: 100%;
+    width: 1050px;
+    position: relative;
+    padding-left: unset;
   }
   .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-pagination {
     left: 50%;
@@ -2494,12 +2567,47 @@ header .menu-mobile {
     bottom: -50px;
   }
   .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-button-prev {
-    left: 10px;
-    top: 65%;
+    top: 50%;
+    left: -40px;
   }
   .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-button-next {
-    right: 10px;
-    top: 65%;
+    right: 50%;
+    right: -40px;
+  }
+}
+@media (max-width: 1200px) {
+  .section-swiper-eshop {
+    padding: 50px 0 80px 0;
+  }
+  .section-swiper-eshop .elementor-container .col-content-eshop {
+    margin-bottom: 50px;
+  }
+  .section-swiper-eshop .elementor-container .col-swiper-eshop {
+    width: 600px;
+  }
+  .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-wrapper {
+    align-items: center;
+  }
+  .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-wrapper .swiper-slide {
+    min-height: unset;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 720px) {
+  .section-swiper-eshop .elementor-container .col-swiper-eshop {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .section-swiper-eshop .elementor-container {
+    padding: 0 20px;
+  }
+  .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-wrapper .swiper-slide {
+    padding: 15px;
+  }
+  .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-button-next, .section-swiper-eshop .elementor-container .col-swiper-eshop .elementor-widget-wrap .swiper-eshop .swiper-ecommerce .swiper-button-prev {
+    display: none;
   }
 }
 .section-head-wp {

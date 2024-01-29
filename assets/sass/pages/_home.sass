@@ -378,6 +378,7 @@
         @include BgContain
     .txt-content-e-site, .txt-content-r-s
       color: $cSecond
+    .txt-content-r-s
       padding-bottom: 50px
 
 .section-r-s
@@ -608,27 +609,6 @@
       .col-img-e-site, .col-content-e-site, .col-content-r-s, col-img-r-s
         width: 100%
 
-@media (max-width: 650px)
-  .section-websites-achievements
-    .elementor-container
-      width: 95%
-      .col-swiper-achievements
-        .swiper-projects
-          .swiper-wrapper
-            .swiper-slide
-              .bloc-swiper
-                padding: 15px
-                .type-project-swiper, .title-project-swiper
-                  font-size: 24px
-          .swiper-button-next, .swiper-button-prev
-            width: 35px
-            height: 35px
-            background-size: contain
-            top: 20%
-          .swiper-button-prev
-            left: -5%
-          .swiper-button-next
-            right: -5%
 
 @media (max-width: 680px)
   .section-bb
@@ -659,6 +639,36 @@
               &:first-of-type
                 margin-bottom: 50px
 
+@media (max-width: 650px)
+  .section-websites-achievements
+    padding-bottom: 100px
+    .elementor-container
+      width: 100%
+      .col-swiper-achievements
+        .swiper-projects
+          .swiper-wrapper
+            .swiper-slide
+              .bloc-swiper
+                padding: 15px
+                min-height: 350px
+                justify-content: center
+                .type-project-swiper, .title-project-swiper
+                  font-size: 24px
+          .swiper-button-next, .swiper-button-prev
+            width: 45px
+            height: 45px
+            background-size: contain
+
+            top: unset!important
+          .swiper-button-prev
+            bottom: -75px
+            left: 35%
+          .swiper-button-next
+            bottom: -75px
+            right: 35%
+
+
+
 @media (max-width: 600px)
   .section-first-home
     .elementor-container
@@ -668,6 +678,21 @@
           .the-swiper::after, .the-swiper::before
             width: 80px
             height: 80px
+  .section-specs-w, .section-e-site, .section-websites-achievements
+    .elementor-container
+      .col-content-specs, .col-content-e-site, .col-swiper-achievements
+        .txt-content-specs, .txt-content-e-site, .context-project-swiper
+          text-align: justify
+  .section-websites-achievements
+    .elementor-container
+      .col-swiper-achievements
+        .swiper-projects
+          .swiper-wrapper
+            .swiper-slide
+              .bloc-swiper
+                .type-project-swiper, .title-project-swiper
+                  text-align: center
+
 
 @media (max-width: 570px)
   .section-first-home
@@ -693,3 +718,16 @@
                   li
                     span
                       font-size: 18px
+  .section-websites-achievements
+    .elementor-container
+      padding: 0
+
+@media (max-width: 400px)
+  .section-websites-achievements
+    .elementor-container
+      .col-swiper-achievements
+        .swiper-projects
+          .swiper-button-prev
+            left: 5%
+          .swiper-button-next
+            right: 5%

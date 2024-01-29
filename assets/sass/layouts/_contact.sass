@@ -35,9 +35,21 @@
           input
             margin: 10px 0px 30px 0px
             height: 45px
+            font-size: 16px
+            color: $cSecond
+            font-weight: 600
           fieldset
             border-style: none
             width: 50%
+            p
+             position: relative
+             label
+              position: unset
+              .wpcf7-form-control-wrap
+                position: unset
+                .wpcf7-not-valid-tip
+                  position: absolute
+                  bottom: 10px
             p, span, input
               width: 100%
             &:first-of-type
@@ -48,6 +60,7 @@
             //width: 100%
             .wpcf7-submit
               margin-top: 30px
+              cursor: pointer
               border: none
               padding: 0 20px
               background-color: $cPrinc
