@@ -72,6 +72,16 @@
             width: 100%
             textarea
               width: 100%
+          .wpcf7-response-output
+            margin: 30px 0 0 0
+            background-color: $cSecond
+            border: none
+            color: $cWhite
+            padding: 0 10px
+            line-height: 45px
+            position: absolute
+            bottom: 0
+            left: 0
 
 @media (max-width: 1200px)
   .section-contact
@@ -108,6 +118,11 @@
                 width: 50%!important
                 min-width: 250px
                 margin: 20px auto
+            .wpcf7-response-output
+              left: 50%
+              transform: translateX(-50%)
+              width: 50%
+              text-align: center
 
 
 @media (max-width: 800px)
@@ -122,6 +137,24 @@
                 padding-right: 0px
               &:nth-of-type(2)
                 padding-left: 0px
+
+@media (max-width: 720px)
+  .section-contact
+    .elementor-container
+      .col-form-contact
+        .form
+          .wpcf7-form
+            .wpcf7-response-output
+              width: 75%
+
+@media (max-width: 500px)
+  .section-contact
+    .elementor-container
+      .col-form-contact
+        .form
+          .wpcf7-form
+            .wpcf7-response-output
+              width: 100%
 
 @media (max-width: 420px)
   .section-contact
