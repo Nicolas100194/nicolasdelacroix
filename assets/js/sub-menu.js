@@ -1,8 +1,6 @@
 const menuHasChildren = document.getElementsByClassName('menu-item-has-children')
 const subMenu = document.getElementsByClassName('sub-menu')
 
-
-console.log(menuHasChildren)
 function DisplaySubMenu(){
     Array.from(menuHasChildren).forEach(menu =>{
         menu.addEventListener('mouseover', (e)=>{
@@ -19,6 +17,7 @@ function CloseSubMenu(){
             subMenu[0].classList.remove('sub-menu-display')
         })
     })
+
 }
 
 DisplaySubMenu()

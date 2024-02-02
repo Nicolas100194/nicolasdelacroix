@@ -118,19 +118,136 @@ header
           li
             a
               color: $cWhite
-              padding-left: 65px
+              padding-left: 60px
               padding-right: 20px
               width: 100%
               display: block
-
         .sub-menu-display
           display: block
+  .container-logo-mobile
+    display: none
+  .menu-mobile
+    display: none
+
+
+//RESPONSIVE
+
+@media (max-width: 1200px)
+  header
+    .menu-menu-principal-container
+      display: none
+    .container-logo-mobile
+      display: block
+      a
+        display: block
+        height: 100%
+        img
+          height: 50%
+          //margin-top: 50%
+          transform: translateY(50%)
+          width: 100%
+        &:hover
+          cursor: pointer
+    .menu-mobile
+      display: none
+      li
+        height: $heightItemMenu
+        padding-left: 20px
+        border-bottom: solid 1px $cWhite
+        position: relative
+        &:after
+          content: ''
+          display: block
+          position: absolute
+          right: 0
+          top: 0
+          background-image: url("../icons/arrow-right.png")
+          background-repeat: no-repeat
+          background-size: 40%
+          background-position: center
+          width: 60px
+          cursor: pointer
+          height: 60px
+        a
+          color: $cWhite!important
+          position: relative
+          //z-index: 99
+          height: 100%
+          line-height: $heightItemMenu
+          display: block
+      .menu-item-has-children
+        &:after
+          background-image: url("../icons/more.png")
+          background-size: 50%
+          li
+            border-bottom: unset
+            &:after
+              display: none
+
+    .menu-mobile-display
+      display: block
+      background-color: $cPrinc
+      position: absolute
+      left: 0
+      right: 0
+      transform: translateY(#{$HeightMenuTop})
+      animation-name: MenuDisplay
+      animation-duration: 0.3s
+      height: 100vh
+      animation-fill-mode: forwards
+      .sub-menu
+        display: none
+      .sub-menu-reveal
+        display: block
+
+@media (max-width: 600px)
+  header
+    //display: block
+    //height: fit-content
+    padding: 0 15px
+    .logo-header-desktop
+      .logo-default
+        display: block
+        margin: 0 auto 0px auto
+        height: 85px
+    .container-logo-mobile
+      width: fit-content
+      .logo-menu-mobile
+        display: flex
+        height: 100%
+        transform: unset
+        .icon-menu-mobile
+          max-width: 30px
+
+    .menu-mobile-display
+      //transform: translateY(65px)
+
+@media (max-width: 510px)
+  header
+    .logo-header-desktop
+      .logo-default
+        height: 75px
+
+@media (max-width: 460px)
+  header
+    .logo-header-desktop
+      .logo-default
+        height: 65px
+
+@media (max-width: 400px)
+  header
+    //padding: 0 5px
+    .logo-header-desktop
+      .logo-default
+        height: 55px
 
 
 
-
-
-
+@keyframes MenuDisplay
+  0%
+    width: 0vw
+  100%
+    width: 100vw
 
 
 

@@ -13,6 +13,7 @@
           object-fit: cover
     .col-form-contact
       padding: 50px
+      background-color: $cWhite
       .title-form
         font-size: 42px
         padding-bottom: 20px
@@ -34,9 +35,21 @@
           input
             margin: 10px 0px 30px 0px
             height: 45px
+            font-size: 16px
+            color: $cSecond
+            font-weight: 600
           fieldset
             border-style: none
             width: 50%
+            p
+             position: relative
+             label
+              position: unset
+              .wpcf7-form-control-wrap
+                position: unset
+                .wpcf7-not-valid-tip
+                  position: absolute
+                  bottom: 10px
             p, span, input
               width: 100%
             &:first-of-type
@@ -44,18 +57,111 @@
             &:nth-of-type(2)
               padding-left: 25px
           p
+            //width: 100%
             .wpcf7-submit
-              margin-top: 50px
-              border-color: $cPrinc
-              color: $cWhite
+              margin-top: 30px
+              cursor: pointer
+              border: none
+              padding: 0 20px
               background-color: $cPrinc
-              padding: 0 25px
-              font-family: 'ChillaxSB'
-              font-size: 18px
+              color: $cWhite
+              font-weight: 600
+            .wpcf7-spinner
+              display: none
           p:first-of-type
             width: 100%
             textarea
               width: 100%
+          .wpcf7-response-output
+            margin: 30px 0 0 0
+            background-color: $cSecond
+            border: none
+            color: $cWhite
+            padding: 0 10px
+            line-height: 45px
+            position: absolute
+            bottom: 0
+            left: 0
+
+@media (max-width: 1200px)
+  .section-contact
+    .elementor-container
+      .col-img-contact
+        width: 30%
+      .col-form-contact
+        width: 70%
 
 
+@media (max-width: 900px)
+  .section-contact
+    .elementor-container
+      flex-direction: column
+      .col-img-contact, .col-form-contact
+        width: 100%
+        .title-form
+          margin: auto
+      .col-img-contact
+        img
+          max-height: 300px
+      .col-form-contact
+        padding: 20px
+        .txt-form
+          text-align: center
+          padding-bottom: 30px
+        .form
+          .wpcf7-form
+            fieldset
+            p
+              width: 100%
+              .wpcf7-submit
+                display: block
+                width: 50%!important
+                min-width: 250px
+                margin: 20px auto
+            .wpcf7-response-output
+              left: 50%
+              transform: translateX(-50%)
+              width: 50%
+              text-align: center
 
+
+@media (max-width: 800px)
+  .section-contact
+    .elementor-container
+      .col-form-contact
+        .form
+          .wpcf7-form
+            fieldset
+              width: 100%
+              &:first-of-type
+                padding-right: 0px
+              &:nth-of-type(2)
+                padding-left: 0px
+
+@media (max-width: 720px)
+  .section-contact
+    .elementor-container
+      .col-form-contact
+        .form
+          .wpcf7-form
+            .wpcf7-response-output
+              width: 75%
+
+@media (max-width: 500px)
+  .section-contact
+    .elementor-container
+      .col-form-contact
+        .form
+          .wpcf7-form
+            .wpcf7-response-output
+              width: 100%
+
+@media (max-width: 420px)
+  .section-contact
+    .elementor-container
+      .col-form-contact
+        .form
+          .wpcf7-form
+            p
+              .wpcf7-submit
+                min-width: 100%

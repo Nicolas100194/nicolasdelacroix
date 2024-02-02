@@ -1,19 +1,192 @@
+@import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
+
+//----SECTION TITLES
+.section-title-primary
+  text-align: center
+  padding: 50px 20px
+  .title-h3
+    color: $cSecond
+  .title-h4
+    color: $cPrinc
+    font-weight: 600
+    font-size: 18px
+@media (max-width: 570px)
+  .section-title-primary
+    .title-h3
+      font-size: 26px
+      h3
+        line-height: 35px
+    .title-h4
+      font-size: 16px
+
+.section-title-primary-b
+  background-color: $cSecond
+  .title-h3
+    color: $cWhite
+
+.section-with-bg-icons
+  position: relative
+  .elementor-container
+    position: unset!important
+    .col-title-primary
+      position: unset
+      .elementor-widget-wrap
+        position: unset
+        .the-bg-icon
+          position: absolute
+          @include AbsoluteCover
+          &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4)
+            display: flex
+            .elementor-widget-container
+              width: 250px
+          &:nth-of-type(1)
+            .elementor-widget-container
+              margin-left: 5%
+              img
+                transform: translateY(75px)
+                animation-name: move-icon-bg-circle
+                animation-duration: 35s
+                animation-iteration-count: infinite
+                animation-fill-mode: forwards
+          &:nth-of-type(2)
+            .elementor-widget-container
+              margin-left: 25%
+              img
+                transform: translateY(42px)
+                animation-name: move-icon-bg-2
+                animation-duration: 35s
+                animation-iteration-count: infinite
+                animation-fill-mode: forwards
+
+          &:nth-of-type(3)
+            .elementor-widget-container
+              margin-left: 75%
+              img
+                transform: translateY(57px)
+                animation-name: move-icon-bg-circle-2
+                animation-duration: 35s
+                animation-iteration-count: infinite
+                animation-fill-mode: forwards
+          &:nth-of-type(4)
+            .elementor-widget-container
+              margin-left: 85%
+              img
+                animation-name: move-icon-bg
+                animation-duration: 35s
+                animation-iteration-count: infinite
+                animation-fill-mode: forwards
+
+@media (max-width: 700px)
+  .section-with-bg-icons
+    .the-bg-icon
+      display: none!important
+@keyframes move-icon-bg
+  0%
+    transform: translate(20px,50px) rotate(0deg)
+
+  50%
+    transform: translate(80px,250px) rotate(250deg)
+
+  100%
+    transform: translate(20px ,50px) rotate(0deg)
+
+@keyframes move-icon-bg-2
+  0%
+    transform: translate(20px,50px) rotate(0deg)
+
+  50%
+    transform: translate(-80px,150px) rotate(-250deg)
+
+  100%
+    transform: translate(20px ,50px) rotate(0deg)
+
+@keyframes move-icon-bg-circle
+  0%
+    transform: translate(20px,50px)
+
+  50%
+    transform: translate(50px, 150px)
+
+  100%
+    transform: translate(20px ,50px)
+
+@keyframes move-icon-bg-circle-2
+  0%
+    transform: translate(20px,50px) scale(0.5)
+
+  50%
+    transform: translate(150px, 150px) scale(1.5)
 
 
-//TITLES
-.title-h1, .title-h2, .title-h3, .title-h4, .title-h5
+  100%
+    transform: translate(20px ,50px)
+
+
+//SECTION TITLES HOME
+
+.section-title-site-vitrine
+  padding: 100px 0 100px 0
+@media (max-width: 700px)
+  .section-title-site-vitrine
+    padding: 70px 20px
+@media (max-width: 500px)
+  .section-title-site-vitrine
+    padding: 70px 20px
+
+.section-title-specs-website
+  padding: 100px 0 150px 0
+@media (max-width: 1200px)
+  .section-title-specs-website
+    padding: 70px 20px
+
+.section-title-achievements
+  padding: 50px 0 50px 0
+
+
+
+
+//SECTION TITLES SITE VITRINE
+.section-title-best-website
+  padding: 50px 0 100px 0
+@media (max-width: 1200px)
+  .section-title-best-website
+    padding: 70px 20px
+.section-title-stats
+  padding: 80px 0!important
+@media (max-width: 1200px)
+  .section-title-stats
+    padding: 70px 20px!important
+
+//----TITLES
+.title-h1, .title-h2, .title-h5
   width: auto!important
   margin-bottom: 0px!important
-  h1, h2, h3, h4, h5, span
+  h1, h2, h3, h5, span
     font-family: 'ChillaxSB'!important
 
-//TITLE H2
+//TITLE H1
 
 .title-h1
-  font-size: 35px
+  font-size: 32px
   h1
     line-height: $lineHeightH1
 
+@media (max-width: 1200px)
+  .title-h1
+    h1
+      line-height: 50px
+@media (max-width: 570px)
+  .title-h1
+    font-size: 25px
+    h1
+      line-height: 40px
+
+
+.title-head-w
+  color: $cSecond
+  padding-bottom: 50px
+  span
+    color: $cPrinc
 
 //TITLE H2
 
@@ -22,15 +195,28 @@
   h2
     line-height: $lineHeightH2
 
+//TITLE H2 OU H3 STYLE
+.title-with-border
+  color: $cPrinc
+  text-transform: uppercase
+  font-weight: 500
+  font-size: 1rem
+  border-left: solid 6px $cPrinc
+  padding-left: 10px
+  max-width: 600px
+  h2, h3
+    line-height: 1.2em
+
 //TITLE H3
 
 .title-h3
-  font-size: 32px
+  font-size: 38px
   h3
     line-height: $lineHeightH3
+    font-family: 'ChillaxSB'!important
+    text-transform: uppercase
 
-.title-h3-w
-  color: $cWhite
+
 
 .title-h3-website
   color: $cSecond
@@ -40,38 +226,64 @@
     font-family: 'ChillaxSB'!important
 
 //TITLE h4
-
 .title-h4
-  font-size: 28px
-  &:after
-    @include AfterTitleIcon
-    @include BgContain
-    bottom: -18px
+  margin-bottom: 15px!important
 
-  h4
-    line-height: $lineHeightH4
-
-.title-h4-y
+.title-h4-primary
+  text-transform: uppercase
+  font-size: 30px
   color: $cPrinc
-
-.title-h4-left
+  max-width: 800px
+  margin: auto
+  padding: 30px 0
   h4
-    font-family: 'ChillaxR'!important
+    font-family: 'ChillaxSB'!important
+
+.title-h4-by
+  font-size: 28px
+  h4
+    font-family: 'ChillaxSB'!important
 
 //TITLE H5
 .title-h5
   font-size: 28px
   color: $cSecond
 
-.title-w-check
+.title-w-trust
   padding-bottom: 20px
+  color: $cPrinc
+  text-transform: uppercase
   @include FlexCenterH
   &:before
     content: ''
     display: block
-    background-image: url("../icons/check-yellow-blue.svg")
-    width: 30px
-    height: 30px
+    width: 60px
+    height: 60px
+    min-height: 60px
+    min-width: 60px
     margin-right: 10px
     @include BgContain
+  .elementor-widget-container
+    display: flex
+    align-items: center
 
+
+.title-w-webdesign
+  &:before
+    background-image: url("../icons/icon-w-webdesign.svg")
+
+.title-w-redac
+  &:before
+    background-image: url("../icons/icon-w-redac.svg")
+
+.title-w-avis
+  &:before
+    background-image: url("../icons/icon-w-avis.svg")
+
+.title-w-responsive
+  &:before
+    background-image: url("../icons/icon-w-responsive.svg")
+
+.title-w-secure
+  &:before
+    background-image: url("../icons/icon-w-secure.svg")

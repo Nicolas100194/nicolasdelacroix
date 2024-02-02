@@ -15,6 +15,11 @@
   align-items: center
   justify-content: center
 
+@mixin AbsoluteCover
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
 //BACKGROUND
 
 @mixin BgContain
@@ -44,7 +49,7 @@
   height: 66px!important
   border: solid 1px!important
   border-radius: $BorderRadiusBtn
-  width: auto
+  width: auto!important
 
 @mixin BtnFormSecond
   height: 80px
@@ -68,6 +73,6 @@
   position: absolute
   width: 30px
   height: 30px
-  right: -30px
+  left: 410px
   background-image: url("../icons/mouse-logo.svg")
 

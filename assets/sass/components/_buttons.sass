@@ -1,51 +1,129 @@
 @import "../../../../nicolasdelacroix/assets/sass/utils/variables"
 @import "../../../../nicolasdelacroix/assets/sass/utils/mixins"
 
-.btn-form-princ
-  @include BtnFormPrinc
-  .elementor-widget-container
-    .elementor-button-wrapper
-      a
-        @include BtnLinkCover
-        padding: 0px 25px
-        font-size: 18px
-        span
-          font-family: 'ChillaxSB'!important
-
-
-
-.btn-header-home
-  @include BtnFormSecond
-  border-color: $cSecond!important
-  width: auto!important
-  .elementor-widget-container
-    .elementor-button-wrapper
-      a
-        @include BtnLinkCoverXL
-        padding: 0 40px
-        font-size: 20px
-        color: $cSecond
-        &:hover
-          color: $cSecond
-        span
-          font-family: 'ChillaxSB'!important
-  &:hover
-    background-color: $cSecond
-    a
-      color: $cWhite!important
-
 .section-btn-center
   padding: 50px 0
-  .col-btn-center
-    .btn-center
-      border-color: $cPrinc!important
-      background-color: $cPrinc
-      width: auto!important
+  .elementor-container
+    .btn-form-princ
       margin: auto
+    .col-btn-center
+      padding: 0 20px
+
+.btn-form-princ
+  width: auto!important
+  margin-bottom: 0px!important
+  text-transform: uppercase
+  letter-spacing: 1px
+  height: 60px
+  .elementor-widget-container
+    height: 100%
+    .elementor-button-wrapper
+      height: 100%
       a
-        color: $cWhite
-    &:hover
-      opacity: .9
+        width: 100%
+        height: 100%
+        padding: 10px 20px 10px calc( #{$WidthFormBtn} + 20px)
+        transition: $durationTransitionBtn
+        display: flex
+        align-items: center
+        &:before
+          content: ''
+          background-color: $cWhite
+          transition: $durationTransitionBtn
+          position: absolute
+          top: 0px
+          bottom: 0px
+          left: 0px
+          z-index: 50
+          transform: skew(-15deg)
+          border: none
+          width: $WidthFormBtn
+        &:after
+          transform: skew(-15deg)
+          content: ''
+          border: none
+          position: absolute
+          display: block
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          @include BoxShadow
+        .elementor-button-content-wrapper
+          &:before
+            content: ''
+            @include BgContain
+            width: 25px
+            height: 25px
+            display: block
+            z-index: 51
+            position: absolute
+            left: calc( #{$WidthFormBtn} - 25px)
+            top: 50%
+            transition: $durationTransitionBtn
+            transform: translate(-50%,-50%)
+          .elementor-button-text
+            z-index: 50
+            font-family: 'ChillaxSB'
+            transition: $durationTransitionBtn
+      a:hover
+        &:after
+          right: -10px
+          transition: $durationTransitionBtn
+        &:before
+          width: 55px
+          transition: $durationTransitionBtn
+        .elementor-button-content-wrapper
+          &:before
+            left: calc( #{$WidthFormBtn} - 20px)
+            transition: $durationTransitionBtn
+          .elementor-button-text
+            transform: translateX(10px)
+            transition: $durationTransitionBtn
+
+@media (max-width: 440px)
+  .btn-form-princ
+    .elementor-widget-container
+      .elementor-button-wrapper
+        a
+          line-height: 20px
+
+.btn-b
+  a:after
+    background-color: $cSecond
+  .elementor-button-content-wrapper
+    &:before
+      background-image: url("../icons/arrow-btn-blue.svg")
+.btn-y
+  a:after
+    background-color: $cPrinc
+  .elementor-button-content-wrapper
+    &:before
+      background-image: url("../icons/arrow-btn-yellow.svg")
+
+.btn-b-link
+  .elementor-button-content-wrapper
+    &:before
+      background-image: url("../icons/icon-btn-b-link.svg")
+
+//---BTN RADIUS SECOND
+
+.btn-sites
+  @include BtnFormPrinc
+  background-color: $cPrinc
+  border-color: $cPrinc!important
+  margin: 0 auto 30px auto!important
+  a
+    padding: 0 20px
+    @include BtnLinkCover
+    .elementor-button-text
+      font-family: 'ChillaxSB'
+      color: $cSecond
+      font-size: 18px
+
+
+
+
 
 .section-btn-large
   padding: 80px 0
@@ -78,3 +156,11 @@
         .btn-large-b
           background-color: $cSecond
 
+@media (max-width: 900px)
+  .section-btn-large
+    padding: 50px 0
+    .elementor-container
+      flex-direction: column
+      align-content: center
+      .btn-large:first-of-type
+        margin-bottom: 30px

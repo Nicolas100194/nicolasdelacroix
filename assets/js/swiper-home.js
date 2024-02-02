@@ -1,6 +1,6 @@
 (function($){
     $('document').ready(function(){
-        const swiper = new Swiper('.swiper-home',{
+        const swiperH = new Swiper('.swiper-home',{
             autoplay: true,
             pagination: {
                 el: '.swiper-pagination'

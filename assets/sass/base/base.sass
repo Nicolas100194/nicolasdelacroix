@@ -8,6 +8,11 @@
   text-decoration: none
   list-style: none
   box-sizing: border-box
+  scroll-behavior: smooth
+
+
+body
+  overflow-x: hidden
 
 .text
   font-size: 18px
@@ -16,57 +21,90 @@
   font-size: 18px
   line-height: 30px
   letter-spacing: 0.8px
-  font-weight: 500!important
+  font-weight: 400!important
   color: $cSecond!important
 
 .elementor
   padding-top: 140px
+@media (max-width: 600px)
+  .elementor
+    //padding-top: 164px
+
+.section-b
+  background-color: $cSecond
+
+.site-lock
+  overflow-y: hidden
+
 
 .section-primary
   .elementor-container
-    max-width: 1600px!important
+    max-width: 1640px!important
+    padding: 0 20px
     .col-left, .col-right, .col-content-primary
       @include FlexCenterH
       .txt-primary-content
         max-width: 700px
         color: $cSecond
-      .img-primary
-        img
-          border-radius: $BorderRadiusElts
-          @include BoxShadowImg
+      .img-primary, .img-secondary
+        width: 90%
+        .elementor-widget-container
+          img
+            border-radius: 80px 0 80px 0
+            border: solid 4px $cWhite
+            position: relative
+            z-index: 80
+            @include BoxShadowImg
+          &:before
+            content: ''
+            background-image: url("../icons/grid-yellow-for-bgw.svg")
+            @include BgContain
+            background-position: left
+            position: absolute
+            top: -30px
+            left: -30px
+            display: block
+            width: 30%
+            height: 30%
+          &:after
+            content: ''
+            position: absolute
+            display: block
+            width: 80%
+            height: 80%
+            background-color: $cPrinc
+            border-radius: 80px 0 80px 0
+            bottom: -30px
+            right: -30px
+            @include BoxShadowImg
+      .img-secondary
+        .elementor-widget-container
+          img
+          &:before
+            display: none
+
     .col-left
       padding-right: 60px
     .col-right
       padding-left: 60px
 
-.section-title-primary
-  padding: 50px 0
-  .col-title-primary
-    .title-primary, .title-secondary
-      margin: auto
-    .title-primary
-      max-width: 650px
-      text-align: center
-      color: $cSecond
-      padding-bottom: 30px
-    .title-secondary
-      color: $cPrinc
+@media (max-width: 1200px)
+  .section-primary
+    .elementor-container
+      .col-img-primary
+        width: 500px
+@media (max-width: 700px)
+  .section-primary
+    .elementor-container
+      .col-img-primary
+        width: 100%
+
 
 .section-single-y
   background-color: $cPrinc
-  padding: 50px 0
+  padding: 100px 0
   color: $cWhite
   text-align: center
-  &:before
-    content: ''
-    display: block
-    width: 180px
-    height: 80%
-    background-image: url("../icons/icon-md-d.svg")
-    @include BgContain
-    position: absolute
-    left: 20px
-    top: 8px
   .col-single-y
     .icon-by
     .title-by
@@ -76,7 +114,12 @@
     .txt-content-by
       line-height: 35px
       color: $cWhite!important
-
+@media (max-width: 1000px)
+  .section-single-y
+    padding: 100px 20px
+@media (max-width: 800px)
+  .section-single-y
+    padding: 50px 20px
 
 
 .elementor-button
@@ -86,3 +129,18 @@
 
 .elementor-element-populated
   padding: 0px!important
+
+@media (max-width: 1200px)
+  .section-primary
+    .elementor-container
+      flex-direction: column
+      align-items: center
+      .col-left, .col-right
+        padding-right: 0px!important
+        padding-left: 0px!important
+      .col-content-primary
+        //width: 90%
+      .col-img-primary
+        //width: 90%
+        .elementor-widget-wrap
+          justify-content: center

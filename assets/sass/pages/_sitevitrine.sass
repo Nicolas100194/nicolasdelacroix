@@ -2,72 +2,51 @@
 @import "../../../../nicolasdelacroix/assets/sass/utils/variables"
 
 .section-head-website
-  background-color: $cPrinc
-  padding: 70px 0
-  .col-title-head
-    @include FlexCenterH
-    .title-head-ws
-      h1
-        color: $cSecond
-
-        span
-          color: $cWhite
-  .col-img-head
-    .img-head-ws
-
-.section-subhead-website
-  color: $cSecond
-  padding: 80px 0
+  padding: 100px 0
   .elementor-container
-    justify-content: center
-    .col-content-subhead
-      max-width: 900px
-      .elementor-widget-wrap
-        flex-direction: column
-        align-items: center
-        .title-subhead, .txt-subhead
-          text-align: center
-        .title-subhead
-          padding-bottom: 50px
-          h2
-        .txt-subhead
-          max-width: 80%
-          padding-bottom: 30px
-          p
-            line-height: 40px
-          strong
-            color: $cPrinc
-        .btn-center
-          background-color: $cPrinc
-          margin: auto
-          width: auto
-          border-color: $cPrinc!important
-          a
-            color: $cWhite
-
-.section-title-w-h2
-  padding: 80px 0
-  .col-title-w-h2
-    .elementor-widget-wrap
-      justify-content: center
-      .title-h2-w
-        text-align: center
-        color: $cSecond
+    padding: 0 50px
+    .col-content-head-w
+      padding-right: 0px
+      .txt-head-w
+        max-width: 80%
+        padding-bottom: 30px
+    .col-img-head-w
+      padding-left: 0px
+      .img-head-w
 
 .section-what-website-v
-  padding: 50px 0
+  padding: 50px 0 150px  0
+  .elementor-container
+    padding: 0 50px
+    .col-img-what-website-v
+      .img-what-website-v
+        .elementor-widget-container
+          &:before
+            display: none
+    .col-content-what-website-v
+      .title-what-website-v
+        font-size: 18px
+      .txt-what-website-v
+        color: $cWhite!important
+        font-weight: 400
+      .p-with-padding
+        padding-bottom: 40px
+
+.section-best-website
+  padding-bottom: 50px
+  .col-content-best-website
+    .p-with-padding
+      padding-bottom: 40px
 
 .section-website-v-y
   &:before
     top: 30px
 
-.section-title-stats
-  padding: 80px 0!important
-
 .section-cards-stats
   padding-bottom: 50px
   .elementor-container
-    max-width: 1400px!important
+    max-width: 1420px!important
+    padding: 0 20px
     .col-card-stats
       .txt-stat
         background-color: $cPrinc
@@ -99,20 +78,20 @@
         .elementor-widget-container
           padding: 0 0 20px 20px
       .inner-section-card
-        min-height: 300px
+        min-height: 320px
+        padding: 20px 0
         background-color: $cWhite
-        padding: 0 20px
         .elementor-container
           height: 100%
           .inner-col-card
             .elementor-widget-wrap
-              align-content: center
+              //align-content: center
               .title-card, .separator-card, .txt-card
                 color: $cSecond
               .title-card
                 font-size: 22px
                 color: $cSecond
-                min-height: 45%
+                margin-bottom: 0px
                 text-transform: uppercase
                 .elementor-widget-container
                   h3
@@ -129,3 +108,151 @@
       &:nth-of-type(2)
         margin: 0 50px
 
+
+//RESPONSIVE
+
+@media (max-width: 1450px)
+  .section-cards-stats
+    .elementor-container
+      .col-card-stats:nth-of-type(2)
+        margin: 0 20px
+      .col-card-stats
+        .inner-section-card
+          .elementor-container
+            .inner-col-card
+              .elementor-widget-wrap
+                .title-card
+                  font-size: 18px
+                  .elementor-widget-container
+                    h3
+                      line-height: 29px
+
+
+@media (max-width: 1200px)
+  .section-head-website
+    padding: 50px
+    .elementor-container
+      padding: 0
+      flex-direction: column-reverse
+      .col-img-head-w
+        width: 800px
+      .col-content-head-w
+        width: 80%
+        padding-top: 50px
+        .elementor-widget-wrap
+          flex-direction: column
+          align-content: center
+          .title-head-w
+            text-align: center
+            padding-bottom: 30px
+          .title-with-border
+            text-align: center
+            max-width: 700px
+            margin: auto
+            padding-left: 0
+            border-left: none
+            padding-bottom: 30px
+          .txt-head-w
+            text-align: center
+            max-width: unset
+          .btn-form-princ
+            width: fit-content!important
+            margin: auto
+  .section-what-website-v
+    padding-bottom: 70px
+    .elementor-container
+      padding: 0
+      .col-img-what-website-v
+        width: 800px
+      .col-content-what-website-v
+        padding-top: 100px
+        width: 800px
+  .section-title-best-website
+  .section-best-website
+    .elementor-container
+      .col-content-best-website
+        width: 800px
+        .btn-form-princ
+          margin: 0 auto 50px auto!important
+      .col-img-best-website
+        width: 800px
+  .section-cards-stats
+    .elementor-container
+      justify-content: center
+      .col-card-stats
+        width: 32%
+
+@media (max-width: 1050px)
+  .section-cards-stats
+    padding-bottom: 0px
+    .elementor-container
+      //flex-direction: column
+      //align-items: center
+      .col-card-stats
+        //width: 30%
+        .txt-stat
+          font-size: 50px
+          height: 250px
+        .inner-section-card
+          min-height: 350px
+      .col-card-stats:nth-of-type(2)
+        //margin: 20px 0
+
+@media (max-width: 1024px)
+  .section-cards-stats
+    .elementor-container
+      .col-card-stats
+        width: 40%
+      .col-card-stats:nth-of-type(3)
+        margin-top: 20px
+
+@media (max-width: 900px)
+  .section-head-website
+    padding: 40px 20px!important
+  .section-head-website, .section-what-website-v, .section-best-website
+    padding: 0px 20px
+    .elementor-container
+      .col-img-head-w, .col-content-head-w, .col-img-what-website-v, .col-content-what-website-v, .col-img-best-website, .col-content-best-website
+        width: 100%
+        .txt-head-w
+          max-width: unset
+        .btn-head-website
+          margin: 0 auto 20px auto!important
+  .section-what-website-v
+    .elementor-container
+      .col-content-what-website-v
+        padding: 50px 0
+      .col-img-what-website-v
+        .img-what-website-v
+          width: 100%
+          .elementor-widget-container
+            &:after
+              display: none
+  .section-best-website
+    .elementor-container
+      padding: 0px
+
+@media (max-width: 780px)
+  .section-cards-stats
+    .elementor-container
+      .col-card-stats
+        width: 60%
+        .inner-section-card
+          min-height: unset
+        &:nth-of-type(2)
+          margin-top: 20px
+
+
+@media (max-width: 670px)
+  .section-cards-stats
+    .elementor-container
+      .col-card-stats
+        width: 80%
+
+@media (max-width: 520px)
+  .section-cards-stats
+    .elementor-container
+      .col-card-stats
+        width: 100%
+        &:nth-of-type(2)
+          margin: 20px 0 0 0

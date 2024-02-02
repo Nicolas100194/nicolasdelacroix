@@ -4,26 +4,93 @@
 .section-first-home
   height: calc(100vh - #{$HeightMenuTop})
   min-height: calc(950px - #{$HeightMenuTop})
-  max-height: 1100px!important
+  max-height: 1000px!important
   overflow: hidden
   .elementor-container
     height: calc(100vh - #{$HeightMenuTop})
     min-height: calc(950px - #{$HeightMenuTop})
-    max-height: 1100px!important
+    max-height: 1000px!important
     position: unset!important
     max-width: 2500px!important
     justify-content: center
     .col-img
       position: unset
-      padding-right: 95px
+      width: 50%
+      min-width: 950px
       .elementor-widget-wrap
         position: unset
         .the-swiper
           position: relative
           z-index: 99
           width: 100%
+          @keyframes moveIconHome1
+            0%
+              transform: translate(0px, 20px) scale(1.2)
+            1%
+              transform: translate(-60px, 50px)
+            100%
+              transform: scale(1.4)
+
+          @keyframes moveIconHome2
+            0%
+              transform: translate(0px,20px) scale(1)
+            100%
+              transform: translate(60px, -50px) scale(1.4)
+          @keyframes moveIconHome3
+            0%
+              transform: rotate(0deg)
+            5%
+              transform: translate(-40px, -50px)
+            25%
+              transform: rotate(90deg)
+            50%
+              transform: rotate(180deg)
+            75%
+              transform: rotate(270deg)
+            100%
+              transform: rotate(360deg) translate(40, -50px)
+          @keyframes moveIconHome4
+            0%
+              transform: rotate(0deg)
+            5%
+              transform: rotate(360deg)translate(5px, -5px)
+
+            100%
+              transform: rotate(0deg) translate(5px, -5px)
           .swiper
             position: unset
+            .bg-icon
+              position: absolute
+              width: auto
+              &:nth-of-type(1)
+                bottom: 0
+                width: 120px
+                animation-name: moveIconHome1
+                animation-duration: 5s
+                animation-fill-mode: forwards
+              &:nth-of-type(2)
+                right: 53px
+                top: -40px
+                animation-name: moveIconHome2
+                animation-duration: 1s
+                animation-fill-mode: both
+              &:nth-of-type(3)
+                top: -70px
+                left: -10px
+                width: 70px
+                animation-name: moveIconHome3
+                animation-duration: 35s
+                animation-iteration-count: infinite
+                animation-fill-mode: forwards
+              &:nth-of-type(4)
+                top: 50%
+                animation-name: moveIconHome4
+                animation-duration: 35s
+                animation-iteration-count: infinite
+              &:nth-of-type(5)
+                right: 20px
+                bottom: 50%
+
             .swiper-pagination
               position: absolute
               bottom: -30px
@@ -39,18 +106,18 @@
           &:before, &:after
             content: ''
             position: absolute
-            width: 30%
-            height: 50%
+            width: 180px
+            height: 180px
             max-width: 215px
             display: inline-block
             @include BgContain
           &:before
-            right: -5%
-            top: -25%
+            right: 4%
+            top: -7%
             background-image: url("../icons/grid-yellow-for-bgw.svg")
           &:after
-            left: -5%
-            bottom: -25%
+            left: -1%
+            bottom: -4%
             background-image: url("../icons/grid-blue-for-bgwy.svg")
         .form-yellow
           width: 48%
@@ -61,19 +128,31 @@
             width: 100%
     .col-content-primary
       max-width: 850px
+      .title-home
+        max-width: 550px
+        color: $cSecond
       .title-h1
         margin-bottom: 0px
-        color: $cPrinc
+
         position: relative
         width: auto
-        &:after
-          top: calc(#{$lineHeightH1} - 10px)
-          @include AfterTitleIcon
-          @include BgContain
+
         h1, span
-          line-height: $lineHeightH1
+          //line-height: $lineHeightH1
           span
-            color: $cSecond
+            color: $cPrinc
+            display: inline-block
+            position: relative
+            &:after
+              content: ''
+              display: block
+              position: absolute
+              bottom: -15px
+              right: -30px
+              width: 30px
+              height: 30px
+              background-image: url("../icons/mouse-logo.svg")
+              @include BgContain
       .chapo
         margin: 50px 0
         color: $cSecond
@@ -86,22 +165,18 @@
         span
           color: $cPrinc
           font-weight: 700
+      .inner-section-first-home
+        .elementor-container
+          height: unset
+          min-height: unset
+          .inner-col-first-home
+            .elementor-widget-wrap
+              flex-direction: column
+              .btn-form-princ:first-of-type
+                margin-bottom: 30px!important
 
 
-.section-title-left-bb
-  padding: 50px 0
-  background-color: $cSecond
-  .col-title-left-bb
-    .elementor-widget-wrap
-      @include FlexColumnCenterH
-    &:before
-      content: ''
-      background-image: url("../icons/icon-d-yellow-op13.svg")
-      @include BgContain
-      width: 75px
-      height: calc(#{$lineHeightH3} + #{$lineHeightH4} * 2)
-      display: block
-      margin-right: 20px
+
 
 .section-bb
   padding: 50px 0 80px 0px
@@ -112,6 +187,8 @@
         @include BoxShadow
         background-color: $cThirdVariant
         border-radius: $BorderRadiusElts
+        width: 350px
+        min-width: 350px
         .icon-site
           margin-top: 20px
         .title-site
@@ -140,57 +217,18 @@
                 width: 33px
                 height: 33px
                 margin-right: 10px
-        .btn-sites
-          @include BtnFormPrinc
-          background-color: $cPrinc
-          border-color: $cPrinc!important
-          margin: 0 auto 20px auto
-          a
-            color: $cSecond
-          &:hover
-            transition: $durationTransition
-            opacity: .9
-        &:nth-of-type(1)
-          margin-right: 45px
+      .inner-col-sites:first-of-type
+        margin-right: 20px
+
 
 .section-b-v3
   background-color: $cThirdVariant2
 
 .section-site-vitrine
-  padding: 65px 0 100px 0
+  padding: 0px 0 130px 0
   .col-content-primary
-    .btn-site-vitrine
-      width: auto
-      margin-top: 30px
-      border-color: $cPrinc!important
-      background-color: $cPrinc
-      .elementor-widget-container
-        .elementor-button-wrapper
-          a
-            color: $cWhite
-            span
-              font-size: 18px
-              font-family: 'ChillaxM'!important
-      &:hover
-        opacity: .9
-        .elementor-widget-container
-          .elementor-button-wrapper
-            a
-              color: $cWhite
-            &:hover
-              transition: $durationTransition
-
-.section-title-specs-w
-  padding: 80px 0
-  .col-title-specs-w
-    .title-specs-w
-      color: $cSecond
-      max-width: 600px
-      text-align: center
-      margin: auto
-      &:after
-        display: none
-
+    .txt-primary-content
+      margin-bottom: 50px
 
 
 .section-specs-w
@@ -205,7 +243,10 @@
       .img-specs
 
 .first-section-s-w
-  padding-bottom: 80px
+  padding-bottom: 100px
+
+.last-section-s-w
+  padding-bottom: 100px
 
 
 
@@ -214,34 +255,98 @@
 
 .section-websites-achievements
   background-color: $cSecond
+  padding-bottom: 50px
   overflow: hidden
-  height: 600px
-  padding-top: 150px
   .elementor-container
-    max-width: 1600px!important
-    .col-btn-achievements
-      @include FlexCenterHV
-      .elementor-widget-wrap
-        width: auto
-        .btn-achievements
-          border-color: $cWhite!important
-          width: auto
-    .col-img-achievements
-      width: 100%
-      position: unset!important
-      .elementor-widget-wrap
-        position: unset
-        .img-achievements
-          position: unset
-          .elementor-widget-container
-            position: unset
-            img
-              position: absolute
-              width: 95%
+    max-width: 800px!important
+    .col-swiper-achievements
+      .swiper-projects
+        overflow: visible
+        .swiper-wrapper
+          .swiper-slide-prev, .swiper-slide-next
+            opacity: .1
+            .bloc-swiper
+              display: none!important
+          .swiper-slide
+            position: relative
+            display: flex
+            align-items: center
+            flex-direction: column
+            .img-project-swiper
+              z-index: 99
+              border: solid 4px $cWhite
+              @include BoxShadowImg
+            .bloc-swiper
+              display: flex
+              flex-direction: column
+              //position: absolute
+              background-color: $cPrinc
+              color: $cWhite
+              width: 100%
+              bottom: 0
+              top: 0
+              transform: translate(-50px)
+              padding: 50px 0 50px 50px
+              //height: 150%
+              //padding-top: 38%
+              //padding: 10% 0 0 50px
+              //transform: translate(-50px, 90%)
               height: auto
-              left: 86%
-              transform: translateX(-50%)
-              top: -150px
+              border-radius: 0 0 0 80px
+              &:before
+                content: ''
+                background-color: $cPrinc
+                display: block
+                position: absolute
+                width: 100%
+                height: 50%
+                transform: translate(-50.5px, -100%)
+
+              //min-height: 630px
+              @include BoxShadow
+              .type-project-swiper, .title-project-swiper
+                font-size: 28px
+                line-height: 32px
+                text-transform: uppercase
+              .type-project-swiper
+                font-family: 'ChillaxSB'
+              .title-project-swiper
+                font-family: 'ChillaxM'
+              .context-project-swiper
+                padding-top: 25px
+                color: $cWhite!important
+                max-width: 70%
+              .link-project-swiper
+                display: flex
+                margin-top: 25px
+                color: $cWhite!important
+                text-decoration: underline
+                &:after
+                  content: ''
+                  display: inline-block
+                  @include BgContain
+                  margin-left: 5px
+                  width: 30px
+                  background-image: url("../icons/icon-link-project.svg")
+
+        .swiper-button-prev, .swiper-button-next
+          width: 55px
+          height: 55px
+          top: 25%
+          &:after
+            content: ''
+            width: 50px
+            height: 50px
+            @include BgContain
+        .swiper-button-prev
+          left: -20%
+          background-image: url("../icons/arrow-prev-slide-ach.svg")
+        .swiper-button-next
+          right: -20%
+          background-image: url("../icons/arrow-next-slide-ach.svg")
+
+
+
 
 .section-title-e-commerce, .section-title-r-s
   padding: 80px 0
@@ -259,9 +364,370 @@
     .img-e-site
   .col-content-e-site, .col-content-r-s
     .title-w-check
+      padding-bottom: 20px
+      @include FlexCenterH
+      &:before
+        content: ''
+        display: block
+        background-image: url("../icons/check-yellow-blue.svg")
+        width: 30px
+        height: 30px
+        min-width: 30px
+        min-height: 30px
+        margin-right: 10px
+        @include BgContain
     .txt-content-e-site, .txt-content-r-s
       color: $cSecond
+    .txt-content-r-s
       padding-bottom: 50px
 
 .section-r-s
   padding-bottom: 80px
+
+//RESPONSIVE
+
+
+@media (max-width: 1650px)
+  .section-primary
+    .elementor-container
+      .col-left
+        padding-right: 30px
+      .col-right
+        padding-left: 30px
+
+
+@media (max-width: 1550px)
+  .section-first-home
+    .elementor-container
+      .col-img
+        min-width: 850px
+
+@media (max-width: 1500px)
+  .section-bb
+    .elementor-container
+      justify-content: center
+      .col-sites-types
+        width: 55%
+        padding-right: 15px
+        .inner-section-sites
+          .elementor-container
+            justify-content: center
+            .inner-col-sites
+              //min-width: 50%
+              //width: 50%
+      .col-img-sites
+        width: 45%
+        padding-left: 15px
+
+@media (max-width: 1380px)
+  .section-first-home
+    .elementor-container
+      .col-img
+        min-width: 750px
+      .col-content-primary
+        .title-h1
+          //font-size: 28px
+          &:after
+            top: calc(#{$lineHeightH1} + 30px)
+            left: 360px
+
+
+@media (max-width: 1364px)
+  .section-bb
+    padding-top: 0px
+    .elementor-container
+      .col-sites-types
+        .inner-section-sites
+          .elementor-container
+            .inner-col-sites
+              width: 50%
+              min-width: 50%
+              .list-sites
+                ul
+                  li
+                    padding: 20px 0
+                    line-height: 30px
+
+@media (max-width: 1328px)
+  .section-first-home
+    .elementor-container
+      .col-content-primary
+        .chapo
+          margin: 25px 0 50px 0
+
+@media (max-width: 1265px)
+  .section-first-home
+    .elementor-container
+      .col-img
+        min-width: 650px
+
+//BREAKPOINT COLONNE
+
+@media (max-width: 1200px)
+  .section-first-home
+    max-height: unset!important
+    height: unset!important
+    .elementor-container
+      max-height: unset!important
+      height: unset!important
+      padding-top: 120px
+      flex-direction: column
+      .col-left, .col-right
+        min-width: unset
+        width: auto
+        padding: 0
+      .col-content-primary
+        width: 100%
+        margin: auto
+      .col-img
+        width: 800px
+        padding-bottom: 80px
+      .col-content-primary
+        .title-home
+          margin: auto
+          text-align: center
+        .chapo
+          margin: 50px auto
+          text-align: center
+        .inner-section-first-home
+          margin-bottom: 50px
+          padding: 0
+          .elementor-container
+            padding-top: 0px
+            .inner-col-first-home
+              .elementor-widget-wrap
+                align-content: center
+  .section-bb
+    .elementor-container
+      .col-left, .col-right
+        width: auto
+        .inner-section-sites
+          .elementor-container
+            flex-direction: row
+            .inner-col-sites
+              width: 350px
+              min-width: unset
+              max-width: 350px
+      .col-img-sites
+        padding-top: 50px
+        img
+          width: 600px
+  .section-site-vitrine
+    padding-bottom: 70px
+    .elementor-container
+      .col-img-site-vitrine, .col-content-site-vitrine
+        width: 800px
+      .col-content-primary
+        padding-top: 100px
+        //width: 90%!important
+        .elementor-widget-wrap
+          flex-direction: column
+          display: inline-block!important
+          .txt-primary-content
+            margin: auto
+            max-width: unset
+            text-align: center
+          .btn-form-princ
+            width: auto!important
+            display: inline-block
+            margin-top: 70px
+            left: 50%
+            transform: translateX(-50%)
+  .section-specs-w
+    .elementor-container
+      .col-content-specs, .col-img-specs
+        width: 90%
+  .first-section-s-w
+    padding-bottom: 50px
+  .last-section-s-w
+    .elementor-container
+      flex-direction: column-reverse
+  .section-title-achievements
+    padding: 50px 0
+  .section-websites-achievements
+    .elementor-container
+      width: 80%
+      .col-swiper-achievements
+        .swiper-projects
+          .swiper-wrapper
+            .swiper-slide
+              .bloc-swiper
+                transform: translateX(0px)
+                padding: 30px
+                border-radius: 0px
+                &:before
+                  display: none
+                .context-project-swiper
+                  max-width: unset
+          .swiper-button-prev
+            left: -14%
+          .swiper-button-next
+            right: -14%
+  .section-e-site
+    .elementor-container
+      .col-content-e-site, .col-img-e-site
+        width: 90%
+      .col-img-e-site
+        padding-bottom: 50px
+  .section-r-s
+    .elementor-container
+      .col-content-r-s, .col-img-r-s
+        width: 90%
+        .elementor-widget-wrap
+          justify-content: center
+
+@media (max-width: 900px)
+  .section-first-home
+    .elementor-container
+      align-content: center
+      .col-img
+        width: 100%
+        margin: 0
+  .section-site-vitrine
+    .elementor-container
+      .col-img-site-vitrine, .col-content-site-vitrine
+        width: 100%
+
+
+@media (max-width: 820px)
+  .section-bb
+    .elementor-container
+      .col-left
+        .inner-section-sites
+          .elementor-container
+            padding: 0px
+            .inner-col-sites
+              width: 45%
+
+@media (max-width: 700px)
+  .section-specs-w
+    .elementor-container
+      .col-content-specs
+        width: 100%
+  .section-e-site, .section-r-s
+    .elementor-container
+      .col-img-e-site, .col-content-e-site, .col-content-r-s, col-img-r-s
+        width: 100%
+
+
+@media (max-width: 680px)
+  .section-bb
+    .elementor-container
+      .col-left
+        .inner-section-sites
+          .elementor-container
+            flex-direction: column
+            align-items: center
+            .inner-col-sites
+              width: 70%
+              max-width: unset
+              margin: 0
+              .title-site
+                h5
+                  font-size: 25px
+              .separator-sites
+                margin: 20px 0
+              .list-sites
+                ul
+                  li
+                    width: 100%
+                    //margin: auto
+                    span
+                      font-size: 20px
+                    &:first-of-type
+                      padding-top: 0px
+              &:first-of-type
+                margin-bottom: 50px
+
+@media (max-width: 650px)
+  .section-websites-achievements
+    padding-bottom: 100px
+    .elementor-container
+      width: 100%
+      .col-swiper-achievements
+        .swiper-projects
+          .swiper-wrapper
+            .swiper-slide
+              .bloc-swiper
+                padding: 15px
+                min-height: 350px
+                justify-content: center
+                .type-project-swiper, .title-project-swiper
+                  font-size: 24px
+          .swiper-button-next, .swiper-button-prev
+            width: 45px
+            height: 45px
+            background-size: contain
+
+            top: unset!important
+          .swiper-button-prev
+            bottom: -75px
+            left: 35%
+          .swiper-button-next
+            bottom: -75px
+            right: 35%
+
+
+
+@media (max-width: 600px)
+  .section-first-home
+    .elementor-container
+      padding-top: 65px
+      .col-img
+        .elementor-widget-wrap
+          .the-swiper::after, .the-swiper::before
+            width: 80px
+            height: 80px
+  .section-specs-w, .section-e-site, .section-websites-achievements
+    .elementor-container
+      .col-content-specs, .col-content-e-site, .col-swiper-achievements
+        .txt-content-specs, .txt-content-e-site, .context-project-swiper
+          text-align: justify
+  .section-websites-achievements
+    .elementor-container
+      .col-swiper-achievements
+        .swiper-projects
+          .swiper-wrapper
+            .swiper-slide
+              .bloc-swiper
+                .type-project-swiper, .title-project-swiper
+                  text-align: center
+
+
+@media (max-width: 570px)
+  .section-first-home
+    .elementor-container
+      .col-content-primary
+        .title-h1
+          h1
+            span::after
+              right: -22px
+              width: 20px
+              height: 20px
+
+@media (max-width: 540px)
+  .section-bb
+    .elementor-container
+      .col-left
+        .inner-section-sites
+          .elementor-container
+            .inner-col-sites
+              width: 100%
+              .list-sites
+                ul
+                  li
+                    span
+                      font-size: 18px
+  .section-websites-achievements
+    .elementor-container
+      padding: 0
+
+@media (max-width: 400px)
+  .section-websites-achievements
+    .elementor-container
+      .col-swiper-achievements
+        .swiper-projects
+          .swiper-button-prev
+            left: 5%
+          .swiper-button-next
+            right: 5%
